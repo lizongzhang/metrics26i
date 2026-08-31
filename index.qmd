@@ -23,6 +23,18 @@ Welcome to the Econometrics Course Website！
 Gujarati, Damodar N. Essentials of econometrics, the 4th edition. McGraw-Hill/Irwin, 2009
     
 <img src="img/download.png" style="width: 24px; height: 24px;margin-right: 10px"/>[下载PDF教材](https://pan.baidu.com/s/1kkeJzUneCgRinTD5OiiKUw?pwd=6789) 
+
+<details>
+<summary style="cursor: pointer; font-weight: bold;">点击展开</summary>
+
+<p>如果想在新窗口打开 PDF，请点这里： <a href="img/Gujarati_Essentials_of_Econometrics_4th.pdf" target="_blank" rel="noopener">在新标签页中查看 PDF</a></p>
+
+<iframe src="img/Gujarati_Essentials_of_Econometrics_4th.pdf" width="100%" height="800" style="border: none;" allowfullscreen>
+  <!-- 备用内容（若浏览器不支持 iframe） -->
+  <p>你的浏览器无法嵌入 PDF，请 <a href="img/Gujarati_Essentials_of_Econometrics_4th.pdf" target="_blank" rel="noopener">点此下载/查看 PDF</a>.</p>
+</iframe>
+
+</details>
     
 <img src="img/download.png" style="width: 24px; height: 24px;margin-right: 10px"/>[下载教材配套数据文件](https://pan.baidu.com/s/1tp6K7jc6bR6uvtmOJArkrw?pwd=6789)  
     
@@ -48,23 +60,39 @@ Gujarati, Damodar N. Essentials of econometrics, the 4th edition. McGraw-Hill/Ir
 
 # 教学平台
 
-<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px"/>[91速课](https://www.91suke.com)：考勤
+雨课堂：直播/录播回看，考勤，作业提交，测验
 
-<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px"/>[在91速课中设置姓名和学号的方法](https://lizongzhang.github.io/stat/91.html)
-
--   QQ群：提交作业，提问答疑
+QQ群：分享授课资源，提问答疑
 
 # 课程考核
 
 -   平时成绩：50%
 
-    -   个人作业：20%
+    -   个人作业和测验：30%
     
-    -   小组作业(案例分析)：20%  
+    -   小组作业：15%  
 
-    -   考勤： 10%
+    -   考勤： 5%
 
 -   期末考试：50%
+
+# 教学互动
+
+<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px;">[匿名提问与教学节奏反馈](https://v.wjx.cn/vm/QFUwVuy.aspx#){target="_blank"}
+
+
+
+
+# 分组
+
+**提交分组信息：<https://www.wjx.top/vm/rXASrvi.aspx#> **
+
+## 组队标准
+* **标准规模**：每组原则上由 **4 位同学**组成。
+* **人数调节**：若班级总人数无法被 4 完全整除，允许出现个别 **3人组** 或 **5人组**。
+* **工作量对等原则**：
+    * **3 人组**：需完成与标准组一致的要求，建议由综合能力较强的同学组成。
+    * **5 人组**：为抵消人力优势，该组需**增加50%的有效样本量**。
 
 ::: {style="text-align: center;"}
 ![](img/bili_up.jpg){width="10%"}

@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "chap6slide.html",
+    "href": "chap6slide.html",
+    "title": "Chapter 6 Dummy Varialbe Regression Model",
+    "section": "",
+    "text": "注意：本讲义供学习交流使用，请勿用于商业用途"
+  },
+  {
     "objectID": "chap5.html",
     "href": "chap5.html",
     "title": "Chap5",
@@ -28,125 +35,6 @@
     "text": "Slides\n讲义\n\n\nEviews\nEviews 创建equation\nEviews Jarque-Bera test\n\n\n习题答案\n\n\n点击展开\n\n\n如果想在新窗口打开 PDF，请点这里： 在新标签页中查看 PDF\n\n\n&lt;!-- 备用内容（若浏览器不支持 iframe） --&gt;\n&lt;p&gt;\n你的浏览器无法嵌入 PDF，请 &lt;a href=\"img/EE4_Ch03_Solutions_Manual.pdf\" target=\"_blank\" rel=\"noopener\"&gt;点此下载/查看 PDF&lt;/a&gt;.\n&lt;/p&gt;\n\n\n\n\n拓展资源\n 在线词云图工具 https://www.wordclouds.com/"
   },
   {
-    "objectID": "chap1.html",
-    "href": "chap1.html",
-    "title": "Chap1",
-    "section": "",
-    "text": "Chapter 1\n讲义\n\n\n课堂讨论\n微信公众号狗熊会&gt;案例图书&gt;精品案例，阅读以下推文\nNo.2线性回归&gt;点评类商户销量分析\nNo.2线性回归&gt;短视频点赞量分析\n\n\nExcel技巧\nExcel数据清洗\n\n\n数据资源\nCSMAR 国泰安经济金融数据库 http://www.gtarsc.com/Home\n中国家庭追踪调查 CFPS http://www.isss.pku.edu.cn/cfps/\n中国家庭金融调查数据 CHFS https://chfs.swufe.edu.cn\n中国健康与养老数据追踪调查数据CHARLS http://charls.pku.edu.cn\n暨南大学社会调查中心 https://sdc-iesr.jnu.edu.cn\nKaggle https://www.kaggle.com/datasets\n如何从中国知网下载统计数据？\n\n\n拓展资源\n经管之家 https://bbs.pinggu.org/\n狗熊会(微信公众号) https://www.xiong99.com.cn/\nUCLA Data Analysis Examples https://stats.oarc.ucla.edu/other/dae/\nThe Data And Story Library https://dasl.datadescription.com/\n Kaggle https://www.kaggle.com/"
-  },
-  {
-    "objectID": "projects.html#project-2",
-    "href": "projects.html#project-2",
-    "title": "Projects",
-    "section": "Project 2",
-    "text": "Project 2"
-  },
-  {
-    "objectID": "projects.html#project-3",
-    "href": "projects.html#project-3",
-    "title": "Projects",
-    "section": "Project 3",
-    "text": "Project 3"
-  },
-  {
-    "objectID": "chap10.html",
-    "href": "chap10.html",
-    "title": "Chap10",
-    "section": "",
-    "text": "Slides\n讲义\n\n\nEViews\nEViews 自相关的图形诊断\nEViews 自相关LM检验\nEViews 广义差分变换\nEViews 标准误的Neway-West校正"
-  },
-  {
-    "objectID": "chap10.html#chapter-10",
-    "href": "chap10.html#chapter-10",
-    "title": "Chap10",
-    "section": "",
-    "text": "讲义"
-  },
-  {
-    "objectID": "chap8.html",
-    "href": "chap8.html",
-    "title": "Chap8",
-    "section": "",
-    "text": "Slides\n讲义\n\n\nEViews\nEViews 多重共线性\n\n\n习题答案\n\n\n点击展开\n\n\n如果想在新窗口打开 PDF，请点这里： 在新标签页中查看 PDF\n\n\n&lt;!-- 备用内容（若浏览器不支持 iframe） --&gt;\n&lt;p&gt;\n你的浏览器无法嵌入 PDF，请 &lt;a href=\"img/EE4_Ch08_Solutions_Manual.pdf\" target=\"_blank\" rel=\"noopener\"&gt;点此下载/查看 PDF&lt;/a&gt;.\n&lt;/p&gt;"
-  },
-  {
-    "objectID": "chap8.html#chapter-8",
-    "href": "chap8.html#chapter-8",
-    "title": "Chap8",
-    "section": "",
-    "text": "讲义"
-  },
-  {
-    "objectID": "chap9.html",
-    "href": "chap9.html",
-    "title": "Chap9",
-    "section": "",
-    "text": "Slides\n讲义\n\n\nEViews\nEViews 残差的图形诊断\nEViews 异方差检验\nEViews 加权最小二乘\nEViews 怀特异方差校正值\n\n\n习题答案\n\n\n点击展开\n\n\n如果想在新窗口打开 PDF，请点这里： 在新标签页中查看 PDF\n\n\n&lt;!-- 备用内容（若浏览器不支持 iframe） --&gt;\n&lt;p&gt;\n你的浏览器无法嵌入 PDF，请 &lt;a href=\"img/EE4_Ch09_Solutions_Manual.pdf\" target=\"_blank\" rel=\"noopener\"&gt;点此下载/查看 PDF&lt;/a&gt;.\n&lt;/p&gt;"
-  },
-  {
-    "objectID": "chap9.html#chapter-9",
-    "href": "chap9.html#chapter-9",
-    "title": "Chap9",
-    "section": "",
-    "text": "讲义"
-  },
-  {
-    "objectID": "case.html",
-    "href": "case.html",
-    "title": "Case",
-    "section": "",
-    "text": "每组4-5人，由组长填写在线问卷，提交分组信息：https://www.wjx.top/vm/e3AyWsR.aspx#"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Textbook",
-    "section": "",
-    "text": "Welcome to the Econometrics Course Website！\n\n\nTextbook\nGujarati, Damodar N. Essentials of econometrics, the 4th edition. McGraw-Hill/Irwin, 2009\n下载PDF教材\n下载教材配套数据文件\n\n\nReference\n下载参考书\n\n\nEViews 12\nEviews官网https://eviews.com/home.html\n申请Eviews12 学生版序列号 http://register1.eviews.com/Lite/\n如何申请免费的Eviews12学生版?\n\n\n教学视频\nEViews入门指南\n\n\n教学平台\n91速课：考勤\n在91速课中设置姓名和学号的方法\n\nQQ群：提交作业，提问答疑\n\n\n\n课程考核\n\n平时成绩：50%\n\n个人作业：20%\n小组作业(案例分析)：20%\n考勤： 10%\n\n期末考试：50%\n\n\n\n\n\nclick here"
-  },
-  {
-    "objectID": "chap2.html",
-    "href": "chap2.html",
-    "title": "Chap2",
-    "section": "",
-    "text": "Slides\n讲义\n\n\nEviews\nEviews12 如何录入数据\nEviews 12 如何导入Excel文件\nEviews 12 主界面\nEviews12 绘制散点图\nEviews12 矩阵散点图和气泡图\nEviews12 回归方程的估计\nEviews12 如何在散点图上添加回归线和回归方程？\nEviews12 如何修改坐标轴字体、添加网格线、设置边框？\n\n\n习题答案\n\n\n点击展开\n\n\n如果想在新窗口打开 PDF，请点这里： 在新标签页中查看 PDF\n\n\n&lt;!-- 备用内容（若浏览器不支持 iframe） --&gt;\n&lt;p&gt;\n你的浏览器无法嵌入 PDF，请 &lt;a href=\"img/EE4_Ch02_Solutions_Manual.pdf\" target=\"_blank\" rel=\"noopener\"&gt;点此下载/查看 PDF&lt;/a&gt;.\n&lt;/p&gt;"
-  },
-  {
-    "objectID": "chap7.html",
-    "href": "chap7.html",
-    "title": "Chap7",
-    "section": "",
-    "text": "Slides\n讲义\n\n\nEViews\nEViews 遗漏或多余变量的检验\nEViews RESET检验\n\n\n习题答案\n\n\n点击展开\n\n\n如果想在新窗口打开 PDF，请点这里： 在新标签页中查看 PDF\n\n\n&lt;!-- 备用内容（若浏览器不支持 iframe） --&gt;\n&lt;p&gt;\n你的浏览器无法嵌入 PDF，请 &lt;a href=\"img/EE4_Ch07_Solutions_Manual.pdf\" target=\"_blank\" rel=\"noopener\"&gt;点此下载/查看 PDF&lt;/a&gt;.\n&lt;/p&gt;"
-  },
-  {
-    "objectID": "chap7.html#chapter-7",
-    "href": "chap7.html#chapter-7",
-    "title": "Chap7",
-    "section": "",
-    "text": "讲义"
-  },
-  {
-    "objectID": "chap4.html",
-    "href": "chap4.html",
-    "title": "Chap4",
-    "section": "",
-    "text": "Slides\n讲义\n案例\n\n\nEViews\nEviews 多元回归\nEviews 受限最小二乘\nEviews 输出结果数值显示格式的设置\n\n\n习题答案\n\n\n点击展开\n\n\n如果想在新窗口打开 PDF，请点这里： 在新标签页中查看 PDF\n\n\n&lt;!-- 备用内容（若浏览器不支持 iframe） --&gt;\n&lt;p&gt;\n你的浏览器无法嵌入 PDF，请 &lt;a href=\"img/EE4_Ch04_Solutions_Manual.pdf\" target=\"_blank\" rel=\"noopener\"&gt;点此下载/查看 PDF&lt;/a&gt;.\n&lt;/p&gt;"
-  },
-  {
-    "objectID": "chap7slide.html",
-    "href": "chap7slide.html",
-    "title": "Chapter 7 Model Selection: Criteria and Tests",
-    "section": "",
-    "text": "注意：本讲义供学习交流使用，请勿用于商业用途"
-  },
-  {
-    "objectID": "chap8slide.html",
-    "href": "chap8slide.html",
-    "title": "Chapter 8 Multicollinearity",
-    "section": "",
-    "text": "注意：本讲义供学习交流使用，请勿用于商业用途"
-  },
-  {
     "objectID": "chap10slide.html",
     "href": "chap10slide.html",
     "title": "Chapter 10 Autocorrelation",
@@ -154,53 +42,25 @@
     "text": "注意：本讲义供学习交流使用，请勿用于商业用途"
   },
   {
-    "objectID": "chap9slide.html",
-    "href": "chap9slide.html",
-    "title": "Chapter 9 Heteroscedasticity",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Textbook",
     "section": "",
-    "text": "注意：本讲义供学习交流使用，请勿用于商业用途"
+    "text": "Welcome to the Econometrics Course Website！"
   },
   {
-    "objectID": "chap1slide.html",
-    "href": "chap1slide.html",
-    "title": "Chapter 1 The Nature and Scope of Econometrics",
-    "section": "",
-    "text": "注意：本讲义供学习交流使用，请勿用于商业用途"
+    "objectID": "index.html#组队标准",
+    "href": "index.html#组队标准",
+    "title": "Textbook",
+    "section": "组队标准",
+    "text": "组队标准\n\n标准规模：每组原则上由 4 位同学组成。\n人数调节：若班级总人数无法被 4 完全整除，允许出现个别 3人组 或 5人组。\n工作量对等原则：\n\n3 人组：需完成与标准组一致的要求，建议由综合能力较强的同学组成。\n5 人组：为抵消人力优势，该组需增加50%的有效样本量。\n\n\n\n\n\n\nclick here"
   },
   {
-    "objectID": "chap6slide.html",
-    "href": "chap6slide.html",
-    "title": "Chapter 6 Dummy Varialbe Regression Model",
+    "objectID": "case.html",
+    "href": "case.html",
+    "title": "Case",
     "section": "",
-    "text": "注意：本讲义供学习交流使用，请勿用于商业用途"
-  },
-  {
-    "objectID": "chap4slide.html",
-    "href": "chap4slide.html",
-    "title": "Chapter 4 Multiple Regression: Estimation and Hypothesis Testing",
-    "section": "",
-    "text": "注意：本讲义供学习交流使用，请勿用于商业用途"
-  },
-  {
-    "objectID": "chap3slide.html",
-    "href": "chap3slide.html",
-    "title": "Chapter 3 The Two-Variable Model: Hypothesis Testing",
-    "section": "",
-    "text": "注意：本讲义供学习交流使用，请勿用于商业用途"
-  },
-  {
-    "objectID": "chap2slide.html",
-    "href": "chap2slide.html",
-    "title": "Chapter 2 Basic Ideas of Linear Regression: The Two-Variable Regression Model",
-    "section": "",
-    "text": "注意：本讲义供学习交流使用，请勿用于商业用途"
-  },
-  {
-    "objectID": "chap5slide.html",
-    "href": "chap5slide.html",
-    "title": "Chapter 5 Functional Forms of Regression Model",
-    "section": "",
-    "text": "注意：本讲义供学习交流使用，请勿用于商业用途"
+    "text": "每组4-5人，由组长填写在线问卷，提交分组信息：https://www.wjx.top/vm/e3AyWsR.aspx#"
   },
   {
     "objectID": "case.html#第1次讨论课第4周",
@@ -229,5 +89,166 @@
     "title": "Case",
     "section": "课堂汇报(第16周)",
     "text": "课堂汇报(第16周)\n后续在QQ群发布"
+  },
+  {
+    "objectID": "chap4slide.html",
+    "href": "chap4slide.html",
+    "title": "Chapter 4 Multiple Regression: Estimation and Hypothesis Testing",
+    "section": "",
+    "text": "注意：本讲义供学习交流使用，请勿用于商业用途"
+  },
+  {
+    "objectID": "chap8slide.html",
+    "href": "chap8slide.html",
+    "title": "Chapter 8 Multicollinearity",
+    "section": "",
+    "text": "注意：本讲义供学习交流使用，请勿用于商业用途"
+  },
+  {
+    "objectID": "chap2slide.html",
+    "href": "chap2slide.html",
+    "title": "Chapter 2 Basic Ideas of Linear Regression: The Two-Variable Regression Model",
+    "section": "",
+    "text": "注意：本讲义供学习交流使用，请勿用于商业用途"
+  },
+  {
+    "objectID": "chap9.html",
+    "href": "chap9.html",
+    "title": "Chap9",
+    "section": "",
+    "text": "Slides\n讲义\n\n\nEViews\nEViews 残差的图形诊断\nEViews 异方差检验\nEViews 加权最小二乘\nEViews 怀特异方差校正值\n\n\n习题答案\n\n\n点击展开\n\n\n如果想在新窗口打开 PDF，请点这里： 在新标签页中查看 PDF\n\n\n&lt;!-- 备用内容（若浏览器不支持 iframe） --&gt;\n&lt;p&gt;\n你的浏览器无法嵌入 PDF，请 &lt;a href=\"img/EE4_Ch09_Solutions_Manual.pdf\" target=\"_blank\" rel=\"noopener\"&gt;点此下载/查看 PDF&lt;/a&gt;.\n&lt;/p&gt;"
+  },
+  {
+    "objectID": "L1slide.html#chapter-1-outline",
+    "href": "L1slide.html#chapter-1-outline",
+    "title": "Chapter 1 The Nature and Scope of Econometrics",
+    "section": "Chapter 1 Outline",
+    "text": "Chapter 1 Outline\n\n1.1 What is Econometrics?\n1.2 Why Study Econometrics?\n1.3 The Methodology of Econometrics\nCourse Info\nData Sources"
+  },
+  {
+    "objectID": "L1slide.html#what-is-econometrics",
+    "href": "L1slide.html#what-is-econometrics",
+    "title": "Chapter 1 The Nature and Scope of Econometrics",
+    "section": "1.1 What is Econometrics?",
+    "text": "1.1 What is Econometrics?\n\nEconometrics: 经济计量学（计量经济学）\n\nNarrow sense: economic measurement（经济度量）\nBroader sense: ……\n\nBiometrics: 生物计量学"
+  },
+  {
+    "objectID": "L1slide.html#what-is-econometrics-1",
+    "href": "L1slide.html#what-is-econometrics-1",
+    "title": "Chapter 1 The Nature and Scope of Econometrics",
+    "section": "1.1 What is Econometrics?",
+    "text": "1.1 What is Econometrics?\n\n经济计量学：利用经济理论、数学、统计推断等工具对经济现象进行分析的一门社会科学。\n\n\n“Econometrics may be defined as the social science in which the tools of economic theory, mathematics, and statistical inference are applied to the analysis of economic phenomena.”\n— Arthur S. Goldberger (1964), Economic Theory"
+  },
+  {
+    "objectID": "L1slide.html#why-study-econometrics",
+    "href": "L1slide.html#why-study-econometrics",
+    "title": "Chapter 1 The Nature and Scope of Econometrics",
+    "section": "1.2 Why Study Econometrics?",
+    "text": "1.2 Why Study Econometrics?\n\nValidate economic theory\n\n验证经济理论 / 假说推断\n\nProvide numerical estimates\n\n提供具体的数值估计"
+  },
+  {
+    "objectID": "L1slide.html#the-methodology-of-econometrics",
+    "href": "L1slide.html#the-methodology-of-econometrics",
+    "title": "Chapter 1 The Nature and Scope of Econometrics",
+    "section": "1.3 The Methodology of Econometrics",
+    "text": "1.3 The Methodology of Econometrics\n\nCreating a statement of theory or hypothesis（建立理论或假说）\nCollecting Data（收集数据）\nSpecifying the mathematical model of theory（设定理论的数学模型）\nSpecifying the econometric model（设定经济计量学模型）"
+  },
+  {
+    "objectID": "L1slide.html#course-info",
+    "href": "L1slide.html#course-info",
+    "title": "Chapter 1 The Nature and Scope of Econometrics",
+    "section": "Course Info",
+    "text": "Course Info\n\n初级 / 应用经济计量学\n教学侧重：\n\n不作复杂的纯数理统计推导与公式证明要求；\n不强调手工繁琐计算；\n重视实际问题分析与现代统计软件实现。"
+  },
+  {
+    "objectID": "L1slide.html#data-sources",
+    "href": "L1slide.html#data-sources",
+    "title": "Chapter 1 The Nature and Scope of Econometrics",
+    "section": "Data Sources",
+    "text": "Data Sources\n\n宏观数据 (Macro Data)\n微观数据 (Micro Data)"
+  },
+  {
+    "objectID": "chap8.html",
+    "href": "chap8.html",
+    "title": "Chap8",
+    "section": "",
+    "text": "Slides\n讲义\n\n\nEViews\nEViews 多重共线性\n\n\n习题答案\n\n\n点击展开\n\n\n如果想在新窗口打开 PDF，请点这里： 在新标签页中查看 PDF\n\n\n&lt;!-- 备用内容（若浏览器不支持 iframe） --&gt;\n&lt;p&gt;\n你的浏览器无法嵌入 PDF，请 &lt;a href=\"img/EE4_Ch08_Solutions_Manual.pdf\" target=\"_blank\" rel=\"noopener\"&gt;点此下载/查看 PDF&lt;/a&gt;.\n&lt;/p&gt;"
+  },
+  {
+    "objectID": "chap3slide.html",
+    "href": "chap3slide.html",
+    "title": "Chapter 3 The Two-Variable Model: Hypothesis Testing",
+    "section": "",
+    "text": "注意：本讲义供学习交流使用，请勿用于商业用途"
+  },
+  {
+    "objectID": "chap9slide.html",
+    "href": "chap9slide.html",
+    "title": "Chapter 9 Heteroscedasticity",
+    "section": "",
+    "text": "注意：本讲义供学习交流使用，请勿用于商业用途"
+  },
+  {
+    "objectID": "chap10.html",
+    "href": "chap10.html",
+    "title": "Chap10",
+    "section": "",
+    "text": "Slides\n讲义\n\n\nEViews\nEViews 自相关的图形诊断\nEViews 自相关LM检验\nEViews 广义差分变换\nEViews 标准误的Neway-West校正"
+  },
+  {
+    "objectID": "chap5slide.html",
+    "href": "chap5slide.html",
+    "title": "Chapter 5 Functional Forms of Regression Model",
+    "section": "",
+    "text": "注意：本讲义供学习交流使用，请勿用于商业用途"
+  },
+  {
+    "objectID": "projects.html#project-2",
+    "href": "projects.html#project-2",
+    "title": "Projects",
+    "section": "Project 2",
+    "text": "Project 2"
+  },
+  {
+    "objectID": "projects.html#project-3",
+    "href": "projects.html#project-3",
+    "title": "Projects",
+    "section": "Project 3",
+    "text": "Project 3"
+  },
+  {
+    "objectID": "chap1.html",
+    "href": "chap1.html",
+    "title": "Chap1",
+    "section": "",
+    "text": "Chapter 1\n讲义\n\n\n课堂讨论\n微信公众号狗熊会&gt;案例图书&gt;精品案例，阅读以下推文\nNo.2线性回归&gt;点评类商户销量分析\nNo.2线性回归&gt;短视频点赞量分析\n\n\nExcel技巧\nExcel数据清洗\n\n\n数据资源\nCSMAR 国泰安经济金融数据库 http://www.gtarsc.com/Home\n中国家庭追踪调查 CFPS http://www.isss.pku.edu.cn/cfps/\n中国家庭金融调查数据 CHFS https://chfs.swufe.edu.cn\n中国健康与养老数据追踪调查数据CHARLS http://charls.pku.edu.cn\n暨南大学社会调查中心 https://sdc-iesr.jnu.edu.cn\nKaggle https://www.kaggle.com/datasets\n如何从中国知网下载统计数据？\n\n\n拓展资源\nFu, Shihe & Guo, Mengmeng, 2017. “Running with a Mask? The Effect of Air Pollution on Marathon Runners’ Performance,” MPRA Paper 79473, University Library of Munich, Germany.\n\n下载 Fu&Guo(2017) https://ideas.repec.org/p/pra/mprapa/79473.html\n\n\n点击展开\n\n\n\n如果想在新窗口打开 PDF，请点这里： 在新标签页中查看 PDF\n\n\n&lt;!-- 备用内容（若浏览器不支持 iframe） --&gt;\n&lt;p&gt;\n你的浏览器无法嵌入 PDF，请 &lt;MPRA_paper_79473.pdf” target=“_blank” rel=“noopener”&gt;点此下载/查看 PDF&lt;/a&gt;.\n&lt;/p&gt;\n\n\n经管之家 https://bbs.pinggu.org/\n狗熊会(微信公众号) https://www.xiong99.com.cn/\nUCLA Data Analysis Examples https://stats.oarc.ucla.edu/other/dae/\nThe Data And Story Library https://dasl.datadescription.com/\n Kaggle https://www.kaggle.com/"
+  },
+  {
+    "objectID": "chap2.html",
+    "href": "chap2.html",
+    "title": "Chap2",
+    "section": "",
+    "text": "Slides\n讲义\n\n\nEviews\nEviews12 如何录入数据\nEviews 12 如何导入Excel文件\nEviews 12 主界面\nEviews12 绘制散点图\nEviews12 矩阵散点图和气泡图\nEviews12 回归方程的估计\nEviews12 如何在散点图上添加回归线和回归方程？\nEviews12 如何修改坐标轴字体、添加网格线、设置边框？\n\n\n习题答案\n\n\n点击展开\n\n\n如果想在新窗口打开 PDF，请点这里： 在新标签页中查看 PDF\n\n\n&lt;!-- 备用内容（若浏览器不支持 iframe） --&gt;\n&lt;p&gt;\n你的浏览器无法嵌入 PDF，请 &lt;a href=\"img/EE4_Ch02_Solutions_Manual.pdf\" target=\"_blank\" rel=\"noopener\"&gt;点此下载/查看 PDF&lt;/a&gt;.\n&lt;/p&gt;"
+  },
+  {
+    "objectID": "chap7.html",
+    "href": "chap7.html",
+    "title": "Chap7",
+    "section": "",
+    "text": "Slides\n讲义\n\n\nEViews\nEViews 遗漏或多余变量的检验\nEViews RESET检验\n\n\n习题答案\n\n\n点击展开\n\n\n如果想在新窗口打开 PDF，请点这里： 在新标签页中查看 PDF\n\n\n&lt;!-- 备用内容（若浏览器不支持 iframe） --&gt;\n&lt;p&gt;\n你的浏览器无法嵌入 PDF，请 &lt;a href=\"img/EE4_Ch07_Solutions_Manual.pdf\" target=\"_blank\" rel=\"noopener\"&gt;点此下载/查看 PDF&lt;/a&gt;.\n&lt;/p&gt;"
+  },
+  {
+    "objectID": "chap4.html",
+    "href": "chap4.html",
+    "title": "Chap4",
+    "section": "",
+    "text": "Slides\n讲义\n案例\n\n\nEViews\nEviews 多元回归\nEviews 受限最小二乘\nEviews 输出结果数值显示格式的设置\n\n\n习题答案\n\n\n点击展开\n\n\n如果想在新窗口打开 PDF，请点这里： 在新标签页中查看 PDF\n\n\n&lt;!-- 备用内容（若浏览器不支持 iframe） --&gt;\n&lt;p&gt;\n你的浏览器无法嵌入 PDF，请 &lt;a href=\"img/EE4_Ch04_Solutions_Manual.pdf\" target=\"_blank\" rel=\"noopener\"&gt;点此下载/查看 PDF&lt;/a&gt;.\n&lt;/p&gt;"
+  },
+  {
+    "objectID": "chap7slide.html",
+    "href": "chap7slide.html",
+    "title": "Chapter 7 Model Selection: Criteria and Tests",
+    "section": "",
+    "text": "注意：本讲义供学习交流使用，请勿用于商业用途"
   }
 ]

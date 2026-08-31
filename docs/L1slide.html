@@ -1,0 +1,2106 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-html/tabby.min.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.6.42">
+
+  <meta name="author" content="Li Zongzhang">
+  <meta name="dcterms.date" content="2026-09-01">
+  <title>Econometrics26fall – Chapter 1  The Nature and Scope of Econometrics</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-3b23134f08a4276564e1247b4ea610ff.css">
+  <link rel="stylesheet" href="style.css">
+  <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+<!-- 1. 右下角 Home 按钮（完全使用原有的位置与大尺寸参数） -->
+<div style="
+  position: fixed;
+  bottom: 50px;
+  right: 20px;
+  z-index: 1000;
+">
+  <a href="https://lizongzhang.github.io/survival" style="
+       display: inline-flex;
+       align-items: center;
+       gap: 8px;
+       padding: 10px 20px;
+       background-color: rgba(255, 255, 255, 0.75);
+       color: #1a5f7a;
+       text-decoration: none;
+       border: 1.5px solid rgba(26, 95, 122, 0.35);
+       border-radius: 10px;
+       font-size: 18px;
+       font-weight: bold;
+       font-family: Arial, sans-serif;
+       backdrop-filter: blur(6px);
+       -webkit-backdrop-filter: blur(6px);
+       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+       transition: all 0.2s ease-in-out;
+     " onmouseover="this.style.backgroundColor='#1a5f7a'; this.style.color='#ffffff'; this.style.borderColor='#1a5f7a';" onmouseout="this.style.backgroundColor='rgba(255, 255, 255, 0.75)'; this.style.color='#1a5f7a'; this.style.borderColor='rgba(26, 95, 122, 0.35)';">
+    <span>🏠</span> Home
+  </a>
+</div>
+
+<!-- 2. header.html（右上角 Logo：完全还原原有 200px 宽度与绝对定位） -->
+<div style="
+  position: absolute; 
+  top: 20px; 
+  right: 20px; 
+  z-index: 1000;
+">
+  <img src="img/bili_up.JPG" style="
+         width: 50px; 
+         height: auto;
+         display: block;
+       " alt="logo">
+</div>
+<!-- 加载楷体风格字体 Noto Serif SC（中国镜像） -->
+<link href="https://fonts.googleapis.cn/css2?family=Noto+Serif+SC:wght@500&amp;display=swap" rel="stylesheet">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Chapter 1 <br>The Nature and Scope of Econometrics</h1>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Li Zongzhang 
+</div>
+</div>
+</div>
+
+  <p class="date">2026-09-01</p>
+</section><section id="TOC">
+<nav role="doc-toc"> 
+<h2 id="toc-title">大纲</h2>
+<ul>
+<li><a href="#/chapter-1-outline" id="/toc-chapter-1-outline">Chapter 1 Outline</a></li>
+<li><a href="#/what-is-econometrics" id="/toc-what-is-econometrics">1.1 What is Econometrics?</a></li>
+<li><a href="#/what-is-econometrics-1" id="/toc-what-is-econometrics-1">1.1 What is Econometrics?</a></li>
+
+<li><a href="#/why-study-econometrics" id="/toc-why-study-econometrics">1.2 Why Study Econometrics?</a></li>
+<li><a href="#/the-methodology-of-econometrics" id="/toc-the-methodology-of-econometrics">1.3 The Methodology of Econometrics</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="#/course-info" id="/toc-course-info">Course Info</a></li>
+
+
+
+
+
+
+<li><a href="#/data-sources" id="/toc-data-sources">Data Sources</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ul>
+</nav>
+</section>
+<section id="chapter-1-outline" class="slide level2">
+<h2>Chapter 1 Outline</h2>
+<ul>
+<li><strong>1.1 What is Econometrics?</strong></li>
+<li><strong>1.2 Why Study Econometrics?</strong></li>
+<li><strong>1.3 The Methodology of Econometrics</strong></li>
+<li><strong>Course Info</strong></li>
+<li><strong>Data Sources</strong></li>
+</ul>
+</section>
+<section id="what-is-econometrics" class="slide level2">
+<h2>1.1 What is Econometrics?</h2>
+<ul>
+<li><strong>Econometrics</strong>: 经济计量学（计量经济学）
+<ul>
+<li><strong>Narrow sense</strong>: economic measurement（经济度量）</li>
+<li><strong>Broader sense</strong>: ……</li>
+</ul></li>
+<li><strong>Biometrics</strong>: 生物计量学</li>
+</ul>
+</section>
+<section id="what-is-econometrics-1" class="slide level2">
+<h2>1.1 What is Econometrics?</h2>
+<ul>
+<li><strong>经济计量学</strong>：利用经济理论、数学、统计推断等工具对经济现象进行分析的一门社会科学。</li>
+</ul>
+<blockquote>
+<p><em>“Econometrics may be defined as the social science in which the tools of economic theory, mathematics, and statistical inference are applied to the analysis of economic phenomena.”</em><br>
+— Arthur S. Goldberger (1964), <em>Economic Theory</em></p>
+</blockquote>
+</section>
+<section class="slide level2">
+
+<h3 id="two-branches-of-econometrics">Two branches of Econometrics</h3>
+<ul>
+<li><strong>Theoretical econometrics</strong>（理论经济计量学）</li>
+<li><strong>Applied econometrics</strong>（应用经济计量学）</li>
+</ul>
+</section>
+<section id="why-study-econometrics" class="slide level2">
+<h2>1.2 Why Study Econometrics?</h2>
+<ul>
+<li><strong>Validate economic theory</strong>
+<ul>
+<li>验证经济理论 / 假说推断</li>
+</ul></li>
+<li><strong>Provide numerical estimates</strong>
+<ul>
+<li>提供具体的数值估计</li>
+</ul></li>
+</ul>
+</section>
+<section id="the-methodology-of-econometrics" class="slide level2">
+<h2>1.3 The Methodology of Econometrics</h2>
+<ol type="1">
+<li><strong>Creating a statement of theory or hypothesis</strong>（建立理论或假说）</li>
+<li><strong>Collecting Data</strong>（收集数据）</li>
+<li><strong>Specifying the mathematical model of theory</strong>（设定理论的数学模型）</li>
+<li><strong>Specifying the econometric model</strong>（设定经济计量学模型）</li>
+</ol>
+</section>
+<section class="slide level2">
+
+<ol start="5" type="1">
+<li><strong>Estimating the parameters of the chosen econometric model</strong>（估计模型参数）</li>
+<li><strong>Model specification testing</strong>（模型设定检验）</li>
+<li><strong>Testing the hypothesis derived from the model</strong>（检验模型导出的假说）</li>
+<li><strong>Using the model for prediction or forecasting</strong>（利用模型进行预测）</li>
+</ol>
+</section>
+<section class="slide level2">
+
+<h3 id="案例财务总监薪酬分析">案例：财务总监薪酬分析</h3>
+<ul>
+<li><strong>数据来源</strong>：上市公司财务总监薪酬及个人特征（CSMAR 数据库）</li>
+<li><strong>关注特征</strong>：性别？年龄？学历？行业？经营绩效？</li>
+<li><strong>统计分析方法</strong>：
+<ul>
+<li>描述性统计分析</li>
+<li>推断性统计分析</li>
+</ul></li>
+<li><strong>思考</strong>：如何选择适当的统计分析方法？</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="薪酬分析经济计量学的视角">薪酬分析：经济计量学的视角</h3>
+<ul>
+<li><strong>经济理论</strong>（指导变量选取与关系假设）</li>
+<li><strong>数学</strong>（建立函数形式表达式）</li>
+<li><strong>统计推断</strong>（利用样本数据估计与检验）</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="案例一-step-1-建立假说">案例一 · Step 1: 建立假说</h3>
+<ul>
+<li><strong>理论假说</strong>：工资由劳动力的人力资本决定
+<ul>
+<li>资历（年龄）</li>
+<li>学历</li>
+</ul></li>
+<li><strong>研究目标</strong>：
+<ul>
+<li>资历对工资的影响效应是什么？如何量化？</li>
+<li>学历对工资的影响效应是什么？如何量化？</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="案例一-step-2-收集数据-csmar">案例一 · Step 2: 收集数据 (CSMAR)</h3>
+<ul>
+<li><strong>数据库</strong>：国泰安 CSMAR 数据库 <span class="math inline">\(\rightarrow\)</span> 公司研究系列 <span class="math inline">\(\rightarrow\)</span> 治理结构 <span class="math inline">\(\rightarrow\)</span> 高管个人资料文件 / 年薪区间文件</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="案例一-step-2-数据样本">案例一 · Step 2: 数据样本</h3>
+<ul>
+<li><strong>样本筛选</strong>：2017 年年报，职位为财务总监（代码 <code>00380000A0</code>），样本容量 1095 家公司（剔除信息不全、任职不足一年及薪酬最低/最高各 5% 极端值）。</li>
+</ul>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">证券代码</th>
+<th style="text-align: left;">姓名</th>
+<th style="text-align: left;">性别</th>
+<th style="text-align: left;">年龄</th>
+<th style="text-align: left;">教育背景</th>
+<th style="text-align: left;">职称</th>
+<th style="text-align: left;">薪酬总额</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">000008</td>
+<td style="text-align: left;">王守俊</td>
+<td style="text-align: left;">男</td>
+<td style="text-align: left;">44</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">991,900</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">000010</td>
+<td style="text-align: left;">李卉</td>
+<td style="text-align: left;">男</td>
+<td style="text-align: left;">33</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">467,200</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">000016</td>
+<td style="text-align: left;">李春雷</td>
+<td style="text-align: left;">男</td>
+<td style="text-align: left;">45</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">1,507,000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">000019</td>
+<td style="text-align: left;">王志萍</td>
+<td style="text-align: left;">女</td>
+<td style="text-align: left;">47</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">会计师</td>
+<td style="text-align: left;">448,900</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">000022</td>
+<td style="text-align: left;">张方</td>
+<td style="text-align: left;">男</td>
+<td style="text-align: left;">53</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">800,000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">000023</td>
+<td style="text-align: left;">张慧</td>
+<td style="text-align: left;">男</td>
+<td style="text-align: left;">35</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">高级会计师</td>
+<td style="text-align: left;">281,700</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">000028</td>
+<td style="text-align: left;">魏平孝</td>
+<td style="text-align: left;">男</td>
+<td style="text-align: left;">54</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">会计师</td>
+<td style="text-align: left;">1,575,000</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level2">
+
+<h3 id="案例一-变量定义与编码说明">案例一 · 变量定义与编码说明</h3>
+<ul>
+<li><strong>教育背景 (Education)</strong>：
+<ul>
+<li><code>1</code> = 中专及中专以下</li>
+<li><code>2</code> = 大专</li>
+<li><code>3</code> = 本科</li>
+<li><code>4</code> = 硕士研究生</li>
+<li><code>5</code> = 博士研究生</li>
+<li><code>6</code> = 其他</li>
+</ul></li>
+<li><strong>职位代码</strong>：<code>00380000A0</code>（末两位字母 <code>A</code> 代表财务方向）</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="案例一-step-3-设定数学模型">案例一 · Step 3: 设定数学模型</h3>
+<ul>
+<li><strong>被解释变量</strong>：<span class="math inline">\(Salary\)</span></li>
+<li><strong>解释变量</strong>：<span class="math inline">\(Age\)</span>, <span class="math inline">\(Education\)</span></li>
+<li><strong>函数形式</strong>： <span class="math display">\[Salary = B_0 + B_1 Age + B_2 Education\]</span></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="案例一-step-4-设定计量经济学模型">案例一 · Step 4: 设定计量经济学模型</h3>
+<ul>
+<li><strong>数学模型</strong>： <span class="math display">\[Salary = B_0 + B_1 Age + B_2 Education\]</span></li>
+<li><strong>计量经济学模型</strong>（引入随机误差项 <span class="math inline">\(u\)</span>）： <span class="math display">\[Salary = B_0 + B_1 Age + B_2 Education + u\]</span></li>
+<li><strong>参数符号预期</strong>：
+<ul>
+<li><span class="math inline">\(B_1 &gt; 0\)</span>（年龄越长，资历越深，工资越高）</li>
+<li><span class="math inline">\(B_2 &gt; 0\)</span>（学历越高，工资越高）</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="案例一-step-5-估计模型参数">案例一 · Step 5: 估计模型参数</h3>
+<ul>
+<li><strong>估计方法</strong>：普通最小二乘法 (OLS)</li>
+<li><strong>软件实现</strong>：Excel / Eviews / Stata / R</li>
+<li><strong>估计的回归方程</strong>： <span class="math display">\[\widehat{Salary}_i = -157635.2 + 5604.7 Age_i + 118184.4 Education_i\]</span></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="案例一-step-6-模型诊断-adequacy">案例一 · Step 6: 模型诊断 (Adequacy)</h3>
+<ul>
+<li><strong>函数的设定形式是否正确？</strong>
+<ul>
+<li>工资和年龄之间是纯线性关系吗？</li>
+<li>是否应该使用半对数模型：<span class="math inline">\(\ln(Salary)_i = B_0 + B_1 Age_i + B_2 Education_i + u_i\)</span>？（<em>见第 5 章</em>）</li>
+</ul></li>
+<li><strong>模型是否存在遗漏变量？</strong>
+<ul>
+<li>性别、行业、地区等。</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="案例一-step-6-计量检验对应章节">案例一 · Step 6: 计量检验对应章节</h3>
+<ul>
+<li><strong>第 7 章</strong>：模型选择（标准与设定检验）</li>
+<li><strong>第 8 章</strong>：多重共线性 (Multicollinearity)</li>
+<li><strong>第 9 章</strong>：异方差 (Heteroskedasticity)</li>
+<li><strong>第 10 章</strong>：自相关 (Autocorrelation)</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="案例一-step-7-检验理论假说">案例一 · Step 7: 检验理论假说</h3>
+<ul>
+<li><strong>模型形式</strong>：<span class="math inline">\(Salary = B_0 + B_1 Age + B_2 Education + u\)</span></li>
+<li><strong>检验对待估参数的理论假说</strong>：
+<ul>
+<li><span class="math inline">\(H_0: B_1 \le 0 \quad \text{vs} \quad H_1: B_1 &gt; 0\)</span></li>
+<li><span class="math inline">\(H_0: B_2 \le 0 \quad \text{vs} \quad H_1: B_2 &gt; 0\)</span></li>
+</ul></li>
+<li><em>具体检验方法参见第 3 章 &amp; 第 4 章单个参数的假设检验</em>。</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="案例一-step-8-模型预测与应用">案例一 · Step 8: 模型预测与应用</h3>
+<ul>
+<li><strong>预测情境</strong>：预测年龄 40 岁、硕士研究生学历（<span class="math inline">\(Edu = 4\)</span>）的财务总监薪酬。</li>
+<li><strong>带入回归模型</strong>： <span class="math display">\[\begin{aligned}
+\widehat{Salary} &amp;= -157635.2 + 5604.7 \times Age + 118184.4 \times Education \\
+&amp;= -157635.2 + 5604.7 \times 40 + 118184.4 \times 4 \\
+&amp;= 539,290.4 \text{ 元}
+\end{aligned}\]</span></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="案例一-深度思考与拓展">案例一 · 深度思考与拓展</h3>
+<ul>
+<li>模型对现实现象的解释程度如何？这是一个好模型吗？</li>
+<li><strong>关于学历的测度</strong>：分类赋值（1-5）是否合理？</li>
+<li><strong>关于资历的测度</strong>：
+<ul>
+<li>生理年龄 vs 真实工龄？</li>
+<li>现职位任职时长？</li>
+<li>行业任职经历？</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="案例二穗京直航机票价格影响因素">案例二：穗京直航机票价格影响因素</h3>
+<ul>
+<li><strong>研究主题</strong>：穗京直航经济舱机票价格影响因素分析</li>
+<li><strong>研究对象与样本</strong>：穗京直航航班，2020.11.8 查询的未来一周共 256 个航班数据。</li>
+<li><strong>主要影响因素</strong>：
+<ul>
+<li>提前订票天数</li>
+<li>执飞机型</li>
+<li>航班起飞时点</li>
+<li>航空公司品牌</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="案例二-变量定义-一">案例二 · 变量定义 (一)</h3>
+<ul>
+<li><strong>Price</strong>：经济舱机票价格（单位：元）</li>
+<li><strong>Advance</strong>：提前购票天数（单位：天）。以 2020 年 11 月 8 日为基准，若购 11 月 9 日票则 <span class="math inline">\(Advance = 1\)</span>，11 月 15 日票则 <span class="math inline">\(Advance = 7\)</span>。</li>
+<li><strong>Takeoff</strong>：航班起飞时点（24 小时制折算）。例如 10:30 <span class="math inline">\(\rightarrow 10.5\)</span>；14:00 <span class="math inline">\(\rightarrow 14.0\)</span>；23:15 <span class="math inline">\(\rightarrow 23.25\)</span>。</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="案例二-变量定义-二">案例二 · 变量定义 (二)</h3>
+<ul>
+<li><strong>Large</strong>（虚拟变量）：<span class="math inline">\(Large = 1\)</span> 表示大型客机执飞；<span class="math inline">\(Large = 0\)</span> 表示中小型客机执飞。</li>
+<li><strong>China</strong>（虚拟变量）：<span class="math inline">\(China = 1\)</span> 表示中国国航执飞；<span class="math inline">\(China = 0\)</span> 表示其他航司。</li>
+<li><strong>Southern</strong>（虚拟变量）：<span class="math inline">\(Southern = 1\)</span> 表示南方航空执飞；<span class="math inline">\(Southern = 0\)</span> 表示其他航司。</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="案例二-step-1-建立理论假说">案例二 · Step 1: 建立理论假说</h3>
+<ul>
+<li><strong>假说 1（差别化定价理论）</strong>：越早购票，机票价格越优惠。</li>
+<li><strong>假说 2（成本与效用理论）</strong>：航班起飞时点越便利，票价越贵；早晨和深夜起飞的航班价格较低。</li>
+<li><strong>假说 3（市场竞争理论）</strong>：市场份额大的大型航空公司票价高于中小航空公司。</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="案例二-step-2-收集数据">案例二 · Step 2: 收集数据</h3>
+<ul>
+<li><strong>数据来源</strong>：携程网（爬虫抓取网页数据）</li>
+<li><strong>核心字段</strong>：机票价格、提前购票天数、起飞时点、起飞日是星期几、机型大小、航空公司</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="案例二-样本数据预览">案例二 · 样本数据预览</h3>
+<table class="caption-top" style="width:100%;">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">ID</th>
+<th style="text-align: left;">price</th>
+<th style="text-align: left;">accurate</th>
+<th style="text-align: left;">takeoff</th>
+<th style="text-align: left;">airplane</th>
+<th style="text-align: left;">Size</th>
+<th style="text-align: left;">company</th>
+<th style="text-align: left;">flight</th>
+<th style="text-align: left;">Weekday</th>
+<th style="text-align: left;">weekend</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">中国联航KN5900</td>
+<td style="text-align: left;">758</td>
+<td style="text-align: left;">93%</td>
+<td style="text-align: left;">21:35</td>
+<td style="text-align: left;">波音737-800(中)</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">中国联航</td>
+<td style="text-align: left;">KN5900</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">中国国航CA1310</td>
+<td style="text-align: left;">780</td>
+<td style="text-align: left;">87%</td>
+<td style="text-align: left;">8:10</td>
+<td style="text-align: left;">波音777-300ER(大)</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">中国国航</td>
+<td style="text-align: left;">CA1310</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">中国国航CA1352</td>
+<td style="text-align: left;">780</td>
+<td style="text-align: left;">87%</td>
+<td style="text-align: left;">12:30</td>
+<td style="text-align: left;">波音777-200(大)</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">中国国航</td>
+<td style="text-align: left;">CA1352</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">海南航空HU7810</td>
+<td style="text-align: left;">800</td>
+<td style="text-align: left;">53%</td>
+<td style="text-align: left;">22:20</td>
+<td style="text-align: left;">78A(大型)</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">海南航空</td>
+<td style="text-align: left;">HU7810</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">东方航空MU5182</td>
+<td style="text-align: left;">920</td>
+<td style="text-align: left;">97%</td>
+<td style="text-align: left;">11:40</td>
+<td style="text-align: left;">A330-300(大)</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">东方航空</td>
+<td style="text-align: left;">MU5182</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">中国联航KN5830</td>
+<td style="text-align: left;">937</td>
+<td style="text-align: left;">83%</td>
+<td style="text-align: left;">17:15</td>
+<td style="text-align: left;">波音737(中)</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">中国联航</td>
+<td style="text-align: left;">KN5830</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">0</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level2">
+
+<h3 id="案例二-step-3-设定数学模型">案例二 · Step 3: 设定数学模型</h3>
+<p><span class="math display">\[\begin{aligned}
+Price_i = &amp; B_0 + B_1 Takeoff_i + B_2 Takeoff_i^2 + B_3 Advance_i \\
+          &amp; + B_4 Large_i + B_5 Southern_i + B_6 China_i
+\end{aligned}\]</span></p>
+</section>
+<section class="slide level2">
+
+<h3 id="案例二-step-4-设定计量经济学模型">案例二 · Step 4: 设定计量经济学模型</h3>
+<p><span class="math display">\[\begin{aligned}
+Price_i = &amp; B_0 + B_1 Takeoff_i + B_2 Takeoff_i^2 + B_3 Advance_i \\
+          &amp; + B_4 Large_i + B_5 Southern_i + B_6 China_i + u_i
+\end{aligned}\]</span></p>
+<ul>
+<li><span class="math inline">\(u_i\)</span>：随机误差项</li>
+<li>二次项引入：反映非线性时间规律（<em>第 5 章</em>）</li>
+<li>虚拟变量引入：量化属性特征（<em>第 6 章</em>）</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="案例二-step-5-ols-参数估计表">案例二 · Step 5: OLS 参数估计表</h3>
+<p><strong>Dependent Variable: PRICE | Method: Least Squares | Included observations: 256</strong></p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Variable</th>
+<th style="text-align: left;">Coefficient</th>
+<th style="text-align: left;">Std. Error</th>
+<th style="text-align: left;">t-Statistic</th>
+<th style="text-align: left;">Prob.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>C</strong></td>
+<td style="text-align: left;">265.7471</td>
+<td style="text-align: left;">203.4456</td>
+<td style="text-align: left;">1.306232</td>
+<td style="text-align: left;">0.1927</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>TAKEOFF</strong></td>
+<td style="text-align: left;">191.7269</td>
+<td style="text-align: left;">28.14661</td>
+<td style="text-align: left;">6.811724</td>
+<td style="text-align: left;">0.0000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>TAKEOFF^2</strong></td>
+<td style="text-align: left;">-7.001507</td>
+<td style="text-align: left;">0.948489</td>
+<td style="text-align: left;">-7.381750</td>
+<td style="text-align: left;">0.0000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>ADVANCE</strong></td>
+<td style="text-align: left;">-91.76225</td>
+<td style="text-align: left;">7.298602</td>
+<td style="text-align: left;">-12.57258</td>
+<td style="text-align: left;">0.0000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>LARGE</strong></td>
+<td style="text-align: left;">124.4946</td>
+<td style="text-align: left;">45.08694</td>
+<td style="text-align: left;">2.761211</td>
+<td style="text-align: left;">0.0062</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>SOUTHERN</strong></td>
+<td style="text-align: left;">342.2230</td>
+<td style="text-align: left;">41.37619</td>
+<td style="text-align: left;">8.271013</td>
+<td style="text-align: left;">0.0000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>CHINA</strong></td>
+<td style="text-align: left;">263.7842</td>
+<td style="text-align: left;">46.19458</td>
+<td style="text-align: left;">5.710284</td>
+<td style="text-align: left;">0.0000</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><span class="math inline">\(R^2 = 0.5803\)</span>, <span class="math inline">\(\text{Adjusted } R^2 = 0.5702\)</span>, <span class="math inline">\(F = 57.39\)</span>, <span class="math inline">\(P(F) = 0.0000\)</span></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="案例二-step-6-模型诊断要点">案例二 · Step 6: 模型诊断要点</h3>
+<ul>
+<li>模型设定误差检验（<em>第 7 章</em>）</li>
+<li>多重共线性诊断（<em>第 8 章</em>）</li>
+<li>异方差检验（<em>第 9 章</em>）</li>
+<li>自相关检验（<em>第 10 章</em>）</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="案例二-step-7-假说-1-检验">案例二 · Step 7: 假说 1 检验</h3>
+<ul>
+<li><strong>假说 1</strong>：越早购票，机票价格越优惠（<span class="math inline">\(B_3 &lt; 0\)</span>）。</li>
+<li><strong>实证检验</strong>：
+<ul>
+<li><span class="math inline">\(ADVANCE\)</span> 的回归系数为 <strong>-91.76</strong>（<span class="math inline">\(P &lt; 0.001\)</span>）。</li>
+<li><strong>经济含义</strong>：在控制其他变量不变的情况下，<strong>提前 1 天购票，机票价格平均便宜约 92 元</strong>。</li>
+<li>实证结果支持假说 1。</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="案例二-起飞时点非线性极值求解">案例二 · 起飞时点非线性极值求解</h3>
+<p><span class="math display">\[\widehat{Price} = 265.75 + 191.73 Takeoff - 7.002 Takeoff^2 - 91.76 Advance + \dots\]</span></p>
+<ul>
+<li>对 <span class="math inline">\(Takeoff\)</span> 求一阶导数令其等于 0： <span class="math display">\[\frac{dPrice}{dTakeoff} = 191.727 - 2 \times 7.002 \cdot Takeoff = 0\]</span> <span class="math display">\[Takeoff^* = \frac{191.727}{2 \times 7.002} = \mathbf{13.7 \text{ 时}} \quad (13\text{点}42\text{分})\]</span></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="案例二-起飞时点与票价曲线图">案例二 · 起飞时点与票价曲线图</h3>
+
+<img data-src="images/takeoff_curve.png" class="quarto-figure quarto-figure-center r-stretch" style="width:65.0%"><ul>
+<li>曲线呈倒 U 型：<strong>13:42 起飞的航班票价最高</strong>；起飞时点距离 13:42 越早或越晚，票价越便宜。</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="案例二-step-7-假说-2-检验">案例二 · Step 7: 假说 2 检验</h3>
+<ul>
+<li><strong>假说 2</strong>：起飞时点存在黄金时段，早晚低价（<span class="math inline">\(B_1 &gt; 0, B_2 &lt; 0\)</span>）。</li>
+<li><strong>实证检验</strong>：
+<ul>
+<li><span class="math inline">\(TAKEOFF\)</span> 系数为正，<span class="math inline">\(TAKEOFF^2\)</span> 系数显著为负。</li>
+<li>实证分析结论完全支持假说 2。</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="案例二-step-8-模型预测应用">案例二 · Step 8: 模型预测应用</h3>
+<ul>
+<li><strong>设定情境</strong>：提前 7 天购票（<span class="math inline">\(Advance=7\)</span>），起飞时间 18 点（<span class="math inline">\(Takeoff=18\)</span>），中型客机（<span class="math inline">\(Large=0\)</span>），南方航空（<span class="math inline">\(Southern=1, China=0\)</span>）。</li>
+<li><strong>计算预测值</strong>： <span class="math display">\[\begin{aligned}
+\widehat{Price} = &amp; 265.75 + 191.73(18) - 7.002(18^2) - 91.76(7) \\
+                  &amp; + 124.49(0) + 342.22(1) + 263.78(0) \\
+\approx &amp; \mathbf{1148 \text{ 元}}
+\end{aligned}\]</span></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="案例三">案例三</h3>
+<ul>
+<li><p><strong>论文题目</strong>：<em>Running with a Mask? The Effect of Air Pollution on Marathon Runners’ Performance</em></p></li>
+<li><p>**利用中国 37 个城市 55 场马拉松超过 30 万跑者的大样本，评估空气污染（AQI）对户外高强度劳动/运动生产力（完赛时间）的影响效应。</p></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="step-1-建立理论或假说-hypothesis">Step 1: 建立理论或假说 (Hypothesis)</h3>
+<ul>
+<li><strong>经济学与健康学视角</strong>：
+<ul>
+<li>空气污染物（<span class="math inline">\(PM_{2.5}, PM_{10}, SO_2, NO_2, CO, O_3\)</span>）在短期暴露下会导致人体肺功能下降、心律不齐、呼吸系统受损及焦虑等心理负效应。</li>
+<li>高强度户外活动时呼吸量急剧上升，空气污染会直接降低户外劳动者/运动员的即期生产力（Short-run Productivity。</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<ul>
+<li><strong>核心理论假说</strong>：
+<ul>
+<li><strong>假说 1</strong>：空气质量越差（AQI 越高），跑者的完赛耗时越长（生产力下降。</li>
+<li><strong>假说 2（非线性效应）</strong>：重度污染天气对成绩的边际损害递增。</li>
+<li><strong>假说 3（异质性效应）</strong>：专业跑者、年轻跑者与半马/全马跑者对污染的弹性存在差异。</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="step-2-收集数据-collecting-data">Step 2: 收集数据 (Collecting Data)</h3>
+<p>论文构建了一个涵盖“微观个体 + 赛事特征 + 宏观环境”的微观横截面与面板数据集</p>
+<ul>
+<li><strong>1. 跑者与比赛成绩数据</strong>：
+<ul>
+<li><strong>来源</strong>：中国田径协会（CAA）官方网站（<code>www.runchina.org.cn</code>。</li>
+<li><strong>样本</strong>：2014–2015 年 37 个城市举办的 55 场马拉松比赛，共 <strong>314,341 名国内跑者</strong>（全马 172,523 人，半马 141,818 人）。</li>
+<li><strong>变量</strong>：净完赛时间（秒）、性别、年龄段、全马/半马标签。</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<ul>
+<li><strong>2. 空气质量数据 (AQI)</strong>：
+<ul>
+<li><strong>来源</strong>：国家环境保护部（MEP）数据中心。</li>
+<li><strong>变量</strong>：比赛日日均 AQI（28–289）及比赛时段（6:00–15:00）逐时 6 种污染物浓度。</li>
+</ul></li>
+<li><strong>3. 气象控制变量</strong>：
+<ul>
+<li><strong>来源</strong>：彭博全球天气数据库（Bloomberg）。</li>
+<li><strong>变量</strong>：降水量、气温、风速、相对湿度。</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="step-2-数据特征与类型归属">Step 2: 数据特征与类型归属</h3>
+<table class="caption-top" style="width:100%;">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">指标变量</th>
+<th style="text-align: left;">均值 (Mean)</th>
+<th style="text-align: left;">标准差 (SD)</th>
+<th style="text-align: left;">极小值</th>
+<th style="text-align: left;">极大值</th>
+<th style="text-align: left;">数据类型归属</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">全马完赛时间 (秒)</td>
+<td style="text-align: left;">16,581 (4h36m)</td>
+<td style="text-align: left;">2,701</td>
+<td style="text-align: left;">8,301</td>
+<td style="text-align: left;">24,337</td>
+<td style="text-align: left;"><strong>横截面微观数据</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">跑者性别 (女性占比)</td>
+<td style="text-align: left;">19%</td>
+<td style="text-align: left;">0.39</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">虚拟变量</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">跑者年龄 (18-34岁占比)</td>
+<td style="text-align: left;">50%</td>
+<td style="text-align: left;">0.50</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">虚拟变量</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">比赛日 AQI 指数</td>
+<td style="text-align: left;">102.19</td>
+<td style="text-align: left;">58.86</td>
+<td style="text-align: left;">28.00</td>
+<td style="text-align: left;">289.00</td>
+<td style="text-align: left;">连续变量</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">比赛时段 <span class="math inline">\(PM_{2.5} (\mu g/m^3)\)</span></td>
+<td style="text-align: left;">73.89</td>
+<td style="text-align: left;">60.89</td>
+<td style="text-align: left;">5.89</td>
+<td style="text-align: left;">268.57</td>
+<td style="text-align: left;">超出 WHO 标准 3 倍</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>数据结构拓展</strong>：除了全样本截面分析外，作者还将跨场次参赛的同一姓名/性别/年龄跑者匹配，构造了 <strong>个体面板数据（Runner Panel Data）</strong>。</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="step-3-设定理论的数学模型">Step 3: 设定理论的数学模型</h3>
+<p>设定完赛时间（<span class="math inline">\(Finishtime\)</span>）与空气质量（<span class="math inline">\(AQI\)</span>）、气象环境（<span class="math inline">\(W\)</span>）以及跑者个体特征（<span class="math inline">\(X\)</span>）之间的<strong>双对数（Log-Log）函数形式</strong>：</p>
+<p><span class="math display">\[\ln(Finishtime_{ijt}) = f(\ln(AQI)_{jt}, W_{jt}, X_i)\]</span></p>
+<ul>
+<li><strong>采用双对数形式的经济学理由</strong>：
+<ul>
+<li>自变量系数 <span class="math inline">\(\beta_1\)</span> 可以直接解释为 <strong>完赛时间的空气污染弹性（Elasticity）</strong>，即 AQI 每恶化 1%，完赛时间平均增加 <span class="math inline">\(\beta_1\%\)</span>。</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="step-4-设定计量经济学模型">Step 4: 设定计量经济学模型</h3>
+<p>加入不可观测因素误差项 <span class="math inline">\(\epsilon_{ijt}\)</span> 与城市固定效应 <span class="math inline">\(\alpha_j\)</span>：</p>
+<p><span class="math display">\[\ln(Finishtime)_{ijt} = \alpha_j + \beta_1 \ln(AQI)_{jt} + \beta_2 W_{jt} + \beta_3 X_i + \delta \cdot Year2015 + \sum \gamma_m Month_m + \epsilon_{ijt}\]</span></p>
+<ul>
+<li><strong>因变量</strong>：<span class="math inline">\(\ln(Finishtime)_{ijt}\)</span>（城市 <span class="math inline">\(j\)</span> 第 <span class="math inline">\(t\)</span> 天跑者 <span class="math inline">\(i\)</span> 的完赛时间对数）。</li>
+<li><strong>核心自变量</strong>：<span class="math inline">\(\ln(AQI)_{jt}\)</span>（空气质量指数对数）。</li>
+<li><strong>控制变量</strong>：
+<ul>
+<li><span class="math inline">\(W_{jt}\)</span>：降水量、温度、风速、相对湿度；</li>
+<li><span class="math inline">\(X_i\)</span>：女性虚拟变量、5 个年龄组虚拟变量、全马/半马虚拟变量；</li>
+<li><span class="math inline">\(\alpha_j\)</span>：<strong>城市固定效应</strong>（吸收各赛道海拔、起伏、弯道等不随时间改变的地理特征）；</li>
+<li><span class="math inline">\(Month_m\)</span>：双月虚拟变量（控制季节性规律）；</li>
+<li><span class="math inline">\(\epsilon_{ijt}\)</span>：随机误差项。</li>
+</ul></li>
+<li><strong>待估参数预期</strong>：<span class="math inline">\(\beta_1 &gt; 0\)</span>（污染显著拖慢成绩）。</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="step-4-因果识别逻辑-causal-identification">Step 4: 因果识别逻辑 (Causal Identification)</h3>
+<ul>
+<li><strong>外生性来源（准自然实验）</strong>：
+<ul>
+<li>马拉松通常需<strong>提前数月报名缴费</strong>（如北京提前 2 个月、武汉提前 3 个月）。</li>
+<li>跑者虽能预期某城市的季节性平均气候，但<strong>无法提前预测比赛当天的瞬时 AQI 随机波动</strong>。</li>
+<li>在控制了城市固定效应与季节效应后，比赛日空气质量对跑者而言具有<strong>严格外生性</strong>。</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="step-5-估计模型参数-ols-与固定效应">Step 5: 估计模型参数 (OLS 与固定效应)</h3>
+<p><strong>全样本基准回归结果（因变量：<span class="math inline">\(\ln(Finishtime)\)</span>，聚类标准误于赛事层面）</strong>：</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">解释变量</th>
+<th style="text-align: left;">(1) 基础模型</th>
+<th style="text-align: left;">(2) 引入气象变量</th>
+<th style="text-align: left;">(3) 引入人口特征 (基准)</th>
+<th style="text-align: left;">(4) 线性水平模型</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong><span class="math inline">\(\ln(AQI)\)</span></strong></td>
+<td style="text-align: left;"><strong>0.0273</strong><span class="math inline">\(^{*}\)</span></td>
+<td style="text-align: left;"><strong>0.0408</strong><span class="math inline">\(^{***}\)</span></td>
+<td style="text-align: left;"><strong>0.0408</strong><span class="math inline">\(^{***}\)</span></td>
+<td style="text-align: left;">—</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">(0.0114)</td>
+<td style="text-align: left;">(0.0030)</td>
+<td style="text-align: left;"><strong>(0.0026)</strong></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong><span class="math inline">\(AQI\)</span> (线性值)</strong></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><strong>2.7311</strong><span class="math inline">\(^{***}\)</span> (0.4434)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">全马虚拟变量</td>
+<td style="text-align: left;">0.6731<span class="math inline">\(^{***}\)</span></td>
+<td style="text-align: left;">0.6731<span class="math inline">\(^{***}\)</span></td>
+<td style="text-align: left;">0.6944<span class="math inline">\(^{***}\)</span></td>
+<td style="text-align: left;">8216.76<span class="math inline">\(^{***}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">女性跑者 (Female)</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">0.0919<span class="math inline">\(^{***}\)</span></td>
+<td style="text-align: left;">988.75<span class="math inline">\(^{***}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">降水量 (Precipitation)</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">0.0282<span class="math inline">\(^{***}\)</span></td>
+<td style="text-align: left;">0.0280<span class="math inline">\(^{***}\)</span></td>
+<td style="text-align: left;">134.29</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">气温 (Temperature)</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">0.0049<span class="math inline">\(^{***}\)</span></td>
+<td style="text-align: left;">0.0047<span class="math inline">\(^{***}\)</span></td>
+<td style="text-align: left;">85.99<span class="math inline">\(^{***}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Adjusted <span class="math inline">\(R^2\)</span></strong></td>
+<td style="text-align: left;"><strong>0.8299</strong></td>
+<td style="text-align: left;"><strong>0.8306</strong></td>
+<td style="text-align: left;"><strong>0.8417</strong></td>
+<td style="text-align: left;"><strong>0.8107</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>样本量 <span class="math inline">\(N\)</span></strong></td>
+<td style="text-align: left;">314,341</td>
+<td style="text-align: left;">314,341</td>
+<td style="text-align: left;">314,341</td>
+<td style="text-align: left;">314,341</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level2">
+
+<h3 id="step-6-模型设定与诊断检验-adequacy-robustness">Step 6: 模型设定与诊断检验 (Adequacy &amp; Robustness)</h3>
+<p>论文进行了极其严密的高阶计量检验，对应课件 Chap 5-10 的检验思想[cite: 1]：</p>
+<ul>
+<li><strong>1. 误差项相关性处理（Chap 10 自相关思想拓展）</strong>：
+<ul>
+<li>同一场比赛跑者的误差项可能受赛事组织影响而相关，标准误在 <strong>比赛场次层面进行聚类调整（Clustered SE）</strong>。</li>
+</ul></li>
+<li><strong>2. 遗漏变量与个体固定效应模型（Runner FE）</strong>：
+<ul>
+<li>引入跑者个体固定效应 <span class="math inline">\(\mu_i\)</span> 消除基因、心理预期、训练水平等不可观测遗漏变量的影响，<span class="math inline">\(\beta_1\)</span> 依然在 1% 水平上显著正相关（弹性为 0.0054~0.0071）。</li>
+</ul></li>
+<li><strong>3. 非线性函数形式检验（Chap 5）</strong>：
+<ul>
+<li>加入 <span class="math inline">\(AQI^2\)</span> 二次项以及不同污染等级虚拟变量（蓝天 vs 重度污染），证实重污染天（<span class="math inline">\(AQI&gt;200\)</span>）对跑者的负面冲击是轻度污染天的 <strong>3 倍</strong>（增加 7.65% 完赛耗时）。</li>
+</ul></li>
+<li><strong>4. 测度误差稳健性检验</strong>：
+<ul>
+<li>使用比赛时段 6:00–15:00 的逐时平均 AQI 及各单一污染物（<span class="math inline">\(PM_{2.5}, PM_{10}, SO_2\)</span>）浓度重新估计，结果完全一致。</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="step-7-检验理论假说-testing-hypotheses">Step 7: 检验理论假说 (Testing Hypotheses)</h3>
+<ul>
+<li><strong>假设检验设定</strong>：
+<ul>
+<li><span class="math inline">\(H_0: \beta_1 \le 0 \quad \text{vs} \quad H_1: \beta_1 &gt; 0\)</span></li>
+</ul></li>
+<li><strong>实证检验结论</strong>：
+<ul>
+<li><span class="math inline">\(t = \frac{0.0408}{0.0026} = 15.69 \quad (p &lt; 0.001)\)</span>，在 1% 统计水平上强力拒绝原假设，<strong>完全支持假说 1</strong>。</li>
+</ul></li>
+<li><strong>异质性检验结果（分样本回归）</strong>：
+<ul>
+<li><strong>全马 vs 半马</strong>：半马弹性（0.0494）高于全马（0.0274）。</li>
+<li><strong>顶尖专业跑者</strong>：对前 20 名精英跑者，污染弹性依然达到 <strong>0.0286</strong> 且显著。</li>
+<li><strong>分位数回归 (Quantile)</strong>：全马跑者中，前 10% 的快速跑者受污染冲击是后 10% 慢跑者的 <strong>3 倍</strong>。</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="step-8-利用模型进行预测与经济学解释">Step 8: 利用模型进行预测与经济学解释</h3>
+<p>基于基准回归模型 <span class="math inline">\(\widehat{\beta_1} = 0.0408\)</span> 进行经济效应数值推演：</p>
+<ul>
+<li><strong>案例一：普通全马跑者预测（2014 北京马拉松真实场景）</strong>：
+<ul>
+<li>全国基准日均 <span class="math inline">\(AQI = 102\)</span>，全马平均耗时 16,581 秒（4 小时 36 分）。</li>
+<li>2014 北马当天遭遇严重雾霾（<span class="math inline">\(AQI = 289\)</span>）： <span class="math display">\[\Delta \ln(AQI) = \ln(289) - \ln(102) \approx 1.0415 \quad (+104.15\%)\]</span> <span class="math display">\[\Delta Finishtime = 16581 \times (0.0408 \times 1.0415) \approx \mathbf{1243 \text{ 秒（约 20.7 分钟）}}\]</span></li>
+</ul></li>
+<li><strong>案例二：前 20 名精英跑者经济损失测算</strong>：
+<ul>
+<li>精英跑者平均耗时将增加 <strong>10.2 分钟</strong>。</li>
+<li>北马冠军奖金 4 万美元（要求跑进 2:09:00），亚军与冠军时间仅差 1 分钟奖金即缩水 2 万美元；</li>
+<li><strong>结论</strong>：空气污染造成的完赛时间延误具有极其高昂的经济与名次机会成本。</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="文献对实证示">文献对实证示</h3>
+<ul>
+<li><strong>1. 严谨的因果识别</strong>：寻找现实制度中的“外生性时滞”（提前报名）解决内生性反向因果问题。</li>
+<li><strong>2. 灵活运用数据类型</strong>：将大样本横截面（Cross-sectional）与个体面板（Panel Data）巧妙结合，有效控制个体固定效应。</li>
+<li><strong>3. 扎实的研究步骤</strong>：从经济学理论假说出发，完成“设定 <span class="math inline">\(\rightarrow\)</span> 估计 <span class="math inline">\(\rightarrow\)</span> 诊断 <span class="math inline">\(\rightarrow\)</span> 检验 <span class="math inline">\(\rightarrow\)</span> 预测”的全流程闭环[cite: 1, 2]。</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="methodology-of-econometrics">Methodology of Econometrics</h3>
+
+<img data-src="img/steps.png" class="quarto-figure quarto-figure-center r-stretch" style="width:45.0%"></section>
+<section class="slide level2">
+
+<h3 id="小组作业开展经济计量实证研究">小组作业：开展经济计量实证研究</h3>
+<ul>
+<li><strong>结合选题深入讨论</strong>：
+<ul>
+<li>核心理论假说是什么？</li>
+<li>经济计量模型的表达式如何构建？</li>
+<li>对模型中的待估参数有何理论预期？</li>
+<li>如何科学测度因变量与自变量？</li>
+<li>通过何种渠道收集样本数据？</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="往届优秀学生课题参考">往届优秀学生课题参考</h3>
+<ul>
+<li>麦当劳门店数量影响因素分析（19金融3 陈沁雪）</li>
+<li>广州酒店客房价格影响因素分析（19金融3 陶羽）</li>
+<li>手机价格影响因素分析（19金融4 黄锦毅）</li>
+<li>欧洲杯球员评分影响因素分析（19金融4 林梓翰）</li>
+<li>二手车价格影响因素分析（19金融4 张培芸）</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="data">DATA</h3>
+<ul>
+<li><strong>横截面数据 (Cross-sectional data)</strong></li>
+<li><strong>时间序列数据 (Time Series data)</strong></li>
+<li><strong>合并数据 (Pooled data)</strong></li>
+<li><strong>面板数据 (Panel data)</strong></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h4 id="pooled-data-合并数据">Pooled data (合并数据)</h4>
+<ul>
+<li><strong>定义</strong>：包含相对较少数量的截面单元，在一段时间内的跨期混合观测。</li>
+<li><strong>示例</strong>：10 个国家在连续 20 年间的 GDP 序列。</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h4 id="panel-data-面板数据">Panel data (面板数据)</h4>
+<ul>
+<li><strong>定义</strong>：跨时间观测<strong>大量</strong>截面单元（观测单元数远超观测期数，即大 <span class="math inline">\(N\)</span> 小 <span class="math inline">\(T\)</span>）。</li>
+<li><strong>特点</strong>：跟踪同一批个体在时间维度上的动态变化。</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h4 id="面板数据实例150-个城市犯罪记录面板">面板数据实例：150 个城市犯罪记录面板</h4>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">city</th>
+<th style="text-align: left;">year</th>
+<th style="text-align: left;">murders</th>
+<th style="text-align: left;">population</th>
+<th style="text-align: left;">police</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">1986</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">350,000</td>
+<td style="text-align: left;">440</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">1990</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">359,200</td>
+<td style="text-align: left;">471</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">1986</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">64,300</td>
+<td style="text-align: left;">75</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">1990</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">65,100</td>
+<td style="text-align: left;">75</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">…</td>
+<td style="text-align: left;">…</td>
+<td style="text-align: left;">…</td>
+<td style="text-align: left;">…</td>
+<td style="text-align: left;">…</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">150</td>
+<td style="text-align: left;">1986</td>
+<td style="text-align: left;">25</td>
+<td style="text-align: left;">543,000</td>
+<td style="text-align: left;">520</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">150</td>
+<td style="text-align: left;">1990</td>
+<td style="text-align: left;">32</td>
+<td style="text-align: left;">546,200</td>
+<td style="text-align: left;">493</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level2">
+
+<h3 id="terminology">Terminology</h3>
+<ul>
+<li><strong>parameters</strong>（参数）
+<ul>
+<li><strong>intercept</strong>（截距）</li>
+<li><strong>slope</strong>（斜率）</li>
+</ul></li>
+<li><strong>error term</strong>（随机误差项 / 误差项）</li>
+<li><strong>dependent variable</strong>（应变量 / 因变量 / 被解释变量）</li>
+<li><strong>independent variable</strong>（自变量 / 独立变量 / 解释变量）</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="chapter-1-summary">Chapter 1 Summary</h3>
+<ul>
+<li><strong>Methodology of Econometrics</strong></li>
+<li><strong>Types of Data</strong>：
+<ul>
+<li>Time series</li>
+<li>Cross-sectional</li>
+<li>Pooled Data / Panel Data</li>
+</ul></li>
+<li><strong>Terminology</strong>：
+<ul>
+<li>Intercept, Slope, Error term, Dependent / Independent variables</li>
+</ul></li>
+</ul>
+</section>
+<section id="course-info" class="slide level2">
+<h2>Course Info</h2>
+<ul>
+<li><strong>初级 / 应用经济计量学</strong></li>
+<li><strong>教学侧重</strong>：
+<ul>
+<li>不作复杂的纯数理统计推导与公式证明要求；</li>
+<li>不强调手工繁琐计算；</li>
+<li>重视实际问题分析与现代统计软件实现。</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="课程目标">课程目标</h3>
+<ul>
+<li>运用经济计量方法科学分析现实经济与管理问题；</li>
+<li>熟练利用统计与计量软件开展实证建模分析。</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="课程安排">课程安排</h3>
+<ul>
+<li><strong>学时与学分</strong>：64 学时，4学分</li>
+<li><strong>教学形式</strong>：
+<ul>
+<li>理论新课 + 随堂练习</li>
+<li>习题讲评、答疑</li>
+<li>EViews操作</li>
+<li>案例讨论</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="学习方法建议">学习方法建议</h3>
+<ul>
+<li><strong>精读教材 (Textbook) + 笔记</strong></li>
+<li><strong>练习 + 软件应用实操</strong></li>
+<li><strong>案例分析与研讨</strong></li>
+<li><strong>积极参与课堂提问与交流</strong></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="主要选用教材">主要选用教材</h3>
+<ul>
+<li><strong>教材</strong>：
+<ul>
+<li>Damodar N. Gujarati &amp; Dawn C. Porter, <em>Essentials of Econometrics</em> (4th edition), McGraw-Hill, 2009.</li>
+</ul></li>
+</ul>
+
+<img data-src="images/gujarati_cover.png" class="quarto-figure quarto-figure-center r-stretch" style="width:45.0%"></section>
+<section class="slide level2">
+
+<h3 id="推荐参考书目清单">推荐参考书目清单</h3>
+<ul>
+<li><p>Stock &amp; Watson, <em>Introduction to Econometrics</em> (Global Edition)</p></li>
+<li><p>Wooldridge, <em>Introductory Econometrics: A Modern Approach</em> (6th ed.)</p></li>
+<li><p>伍德里奇, 《计量经济学导论：现代观点》（中文第六版）</p></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<ul>
+<li><p>Kleiber &amp; Zeileis, <em>Applied Econometrics with R</em></p></li>
+<li><p>Roberto Pedace, <em>Econometrics For Dummies</em></p></li>
+<li><p>洪永淼, 《高级计量经济学》（研究生教学用书）</p></li>
+</ul>
+</section>
+<section id="data-sources" class="slide level2">
+<h2>Data Sources</h2>
+<ul>
+<li><strong>宏观数据 (Macro Data)</strong></li>
+<li><strong>微观数据 (Micro Data)</strong></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="宏观数据主要来源">宏观数据主要来源</h3>
+<ul>
+<li><strong>国家统计局</strong>：<code>http://www.stats.gov.cn/</code></li>
+<li><strong>政府各部委公开数据</strong>：<code>http://www.gov.cn/</code></li>
+<li><strong>联合国统计司</strong>：<code>http://data.un.org/</code></li>
+<li><strong>世界银行公开数据</strong>：<code>https://data.worldbank.org</code></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="国家政府部委公开网站资源">国家政府部委公开网站资源</h3>
+<ul>
+<li>外交部、发展改革委、教育部、科技部、公安部、民政部、司法部、财政部、环保部、住建部、交通运输部、水利部、农业部、商务部、卫计委、人民银行、审计署、国资委、海关总署、国家知识产权局等。</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="高校图书馆订购数据库">高校图书馆订购数据库</h3>
+<ul>
+<li><strong>宏观数据库（国家、省、市、县多级）</strong>：
+<ul>
+<li><strong>EPS 全球数据库</strong></li>
+<li><strong>国研网 (DRCNET)</strong></li>
+<li><strong>中国知网 (CNKI) 统计数据平台</strong></li>
+</ul></li>
+<li><strong>微观数据库（上市公司/金融市场）</strong>：
+<ul>
+<li><strong>CSMAR 国泰安经济金融数据库</strong></li>
+<li><strong>RESSET (锐思) 金融研究数据库</strong></li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="数据库访问规范提示">数据库访问规范提示</h3>
+<ul>
+<li><strong>IP 访问限制</strong>：务必在校园网 IP 地址范围内访问；</li>
+<li><strong>正规入口</strong>：从大学图书馆主页 <span class="math inline">\(\rightarrow\)</span> 电子资源 <span class="math inline">\(\rightarrow\)</span> 中文/外文数据库检索进入；</li>
+<li><strong>注意</strong>：避免通过公共搜索引擎直接搜索第三方链接访问。</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="eps-全球统计数据平台">EPS 全球统计数据平台</h3>
+<ul>
+<li><strong>网址</strong>：<code>http://olap.epsnet.com.cn</code></li>
+<li><strong>收录资源</strong>：
+<ul>
+<li>全球主要经济体宏观数据</li>
+<li>中国区域经济数据库（分省、分市、分县级宏观综合数据）</li>
+<li>涵盖农业、工业、投资、消费、教育与卫生等专项模块</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="国研网-drcnet-统计数据库">国研网 (DRCNET) 统计数据库</h3>
+<ul>
+<li><strong>主办机构</strong>：国务院发展研究中心信息中心</li>
+<li><strong>网址</strong>：<code>http://data.drcnet.com.cn</code></li>
+<li><strong>三大核心子库</strong>：
+<ul>
+<li>世界经济数据库</li>
+<li>宏观经济数据库</li>
+<li>区域经济与重点行业数据库</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="中国知网-cnki-大数据研究平台">中国知网 (CNKI) 大数据研究平台</h3>
+<ul>
+<li><strong>访问路径</strong>：中国知网 <span class="math inline">\(\rightarrow\)</span> 大数据研究平台 <span class="math inline">\(\rightarrow\)</span> 统计数据</li>
+<li><strong>功能</strong>：文献检索、统计数据指标检索、年鉴全文检索、表格与数据条目一键导出</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="中国知网-统计数据年鉴导航">中国知网 · 统计数据年鉴导航</h3>
+<ul>
+<li><strong>网址</strong>：<code>http://tongji.cnki.net/</code></li>
+<li><strong>收录规模</strong>：超 1,143 种统计年鉴、7,151 册统计资料、数千万条时间序列指标。</li>
+<li><strong>热门年鉴</strong>：
+<ul>
+<li>《中国统计年鉴》、《中国金融年鉴》、《中国城市统计年鉴》、《中国农村统计年鉴》、《国际统计年鉴》及各省份统计年鉴。</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="知网统计年鉴多维分类检索">知网统计年鉴：多维分类检索</h3>
+<ul>
+<li><strong>领域分类</strong>：综合、国民经济核算、固定资产投资、人口与人力资源、财政金融、自然资源能源、工业、农业等。</li>
+<li><strong>资料类型</strong>：统计年鉴、分析报告、资料汇编、调查资料、普查资料、统计摘要。</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="重点年鉴中国统计年鉴">重点年鉴：《中国统计年鉴》</h3>
+
+<img data-src="images/china_stats_yearbook.png" class="quarto-figure quarto-figure-center r-stretch" style="width:45.0%"><ul>
+<li><strong>编撰机构</strong>：国家统计局 / 中国统计出版社</li>
+<li><strong>收录范围</strong>：1981 年至今历年国民经济综合指标</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="重点年鉴中国城市统计年鉴">重点年鉴：《中国城市统计年鉴》</h3>
+
+<img data-src="images/china_city_yearbook.png" class="quarto-figure quarto-figure-center r-stretch" style="width:45.0%"><ul>
+<li><strong>特色</strong>：涵盖全国地级以上城市及县级市的行政区划、人口变动、经济产出、市政建设等细粒度数据（支持 Excel 直接下载）。</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="csmar-国泰安-经济金融数据库">CSMAR (国泰安) 经济金融数据库</h3>
+<ul>
+<li><strong>定位</strong>：中国上市公司与证券市场研究微观数据库</li>
+<li><strong>网址</strong>：<code>http://www.gtarsc.com/Home</code></li>
+<li><strong>特色</strong>：涵盖股票市场、公司治理结构、财务报表、管理层特征、并购重组与违规处理等。</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="csmar-公司研究系列子模块">CSMAR 公司研究系列子模块</h3>
+<ul>
+<li>股票市场系列、因子研究系列、公司治理结构、高管特征与薪酬、财务指标分析、分析师预测、审计研究、精准扶贫、绿色金融等。</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="resset-锐思-金融研究数据库">RESSET (锐思) 金融研究数据库</h3>
+<ul>
+<li><strong>网址</strong>：<code>http://www.resset.cn/</code></li>
+<li><strong>特色</strong>：与国泰安互补，深度覆盖管理层职位、持股与薪酬变动历史、股权激励计划、现金分红等微观高频数据。</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="resset-数据检索流程">RESSET 数据检索流程</h3>
+<ol type="1">
+<li><strong>选择日期范围</strong>（任职起始日 / 报告期）；</li>
+<li><strong>设定查询条件</strong>（股票代码、板块、字段勾选）；</li>
+<li><strong>导出数据</strong>（查看数据样例、数据词典并批量下载）。</li>
+</ol>
+</section>
+<section class="slide level2">
+
+<h3 id="公开微观调查数据库推荐">公开微观调查数据库推荐</h3>
+<ul>
+<li><strong>CFPS</strong>：中国家庭追踪调查（北京大学中国社会科学调查中心）</li>
+<li><strong>CHFS</strong>：中国家庭金融调查（西南财经大学）</li>
+<li><strong>CHARLS</strong>：中国健康与养老追踪调查（北京大学）</li>
+<li><strong>广东千村调查</strong>：农村微观实地调查（暨南大学）</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="开放数据平台与检索">开放数据平台与检索</h3>
+<ul>
+<li><strong>Kaggle Datasets</strong>：<code>https://www.kaggle.com/datasets</code>（涵盖全球机器学习、分类、聚类经典开放数据集）</li>
+<li><strong>Bing 搜索</strong>：查找公开科研数据索引</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="kaggle-开放数据集界面示例">Kaggle 开放数据集界面示例</h3>
+<ul>
+<li>涵盖信用卡聚类、葡萄酒分析、客户画像、航空事故等海量结构化 CSV 数据源，可直接作为计量建模实战训练素材。</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="网页数据采集工具八爪鱼采集器">网页数据采集工具：八爪鱼采集器</h3>
+<ul>
+<li><strong>官网</strong>：提供图形化网页抓取模板，支持电商、房产、社交媒体及招投标信息抓取。</li>
+<li><strong>适用场景</strong>：当官方统计库缺少现成数据时，自定义爬取微观交易数据。</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="八爪鱼采集器界面">八爪鱼采集器界面</h3>
+<ul>
+<li>内置京东、天猫、房天下、微博等主流平台采集模板，支持零代码可视化规则提取。</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="课外拓展八爪鱼网页数据采集实操">课外拓展：八爪鱼网页数据采集实操</h3>
+<ul>
+<li><strong>Bilibili 视频教程</strong>：<code>https://www.bilibili.com/video/BV18u411D7GM</code></li>
+<li><strong>主题</strong>：<em>《八爪鱼客户端抓取网页数据及利用 Excel 初步清洗整理》</em></li>
+</ul>
+
+
+</section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+<p><a href="https://lizongzhang.github.io/metrics26i">Econometrics</a> | © 2026, <a href="https://space.bilibili.com/590872906/">Li Zongzhang</a></p>
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': true,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true,"width":"wide"},
+'chalkboard': {"buttons":true,"board-canvas-background":"#f0f0f0"},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const onCopySuccess = function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
+      });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+        const config = {
+          allowHTML: true,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start',
+        };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+</body></html>

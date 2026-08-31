@@ -4,7 +4,7 @@ title: "Chap1"
 
 # Chapter 1
 
-<img src="img/teacher.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[讲义](https://lizongzhang.github.io/econometrics-with-eviews/chap1slide.html){target="_blank"} 
+<img src="img/teacher.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[讲义](https://lizongzhang.github.io/metrics26i/L1slide.html){target="_blank"} 
 
 
 # 课堂讨论
@@ -38,6 +38,22 @@ title: "Chap1"
 
 
 # 拓展资源
+
+Fu, Shihe & Guo, Mengmeng, 2017. "Running with a Mask? The Effect of Air Pollution on Marathon Runners’ Performance," MPRA Paper 79473, University Library of Munich, Germany.
+
+  - <img src="img/download.png" style="width: 24px; height: 24px;margin-right: 10px"/>[下载 Fu&Guo(2017)](https://pan.baidu.com/s/1kkeJzUneCgRinTD5OiiKUw?pwd=6789) https://ideas.repec.org/p/pra/mprapa/79473.html
+
+  - <details>
+<summary style="cursor: pointer; font-weight: bold;">点击展开</summary>
+
+<p>如果想在新窗口打开 PDF，请点这里： <a href="img/MPRA_paper_79473.pdf" target="_blank" rel="noopener">在新标签页中查看 PDF</a></p>
+
+<iframe src="img/MPRA_paper_79473.pdf" width="100%" height="800" style="border: none;" allowfullscreen>
+  <!-- 备用内容（若浏览器不支持 iframe） -->
+  <p>你的浏览器无法嵌入 PDF，请 <MPRA_paper_79473.pdf" target="_blank" rel="noopener">点此下载/查看 PDF</a>.</p>
+</iframe>
+
+</details>
 
 <img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">经管之家 <https://bbs.pinggu.org/> 
 
