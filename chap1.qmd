@@ -2,9 +2,9 @@
 title: "Chap1"
 ---
 
-# Chapter 1
+# 讲义
 
-<img src="img/teacher.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[讲义](https://lizongzhang.github.io/metrics26i/L1slide.html){target="_blank"} 
+<img src="img/teacher.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[L1 Slides](https://lizongzhang.github.io/metrics26i/L1slide.html){target="_blank"} 
 
 
 # 课堂讨论
