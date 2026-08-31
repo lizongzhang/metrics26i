@@ -163,12 +163,13 @@
   right: 20px; 
   z-index: 1000;
 ">
-  <img src="img/bili_up.JPG" style="
-         width: 50px; 
+  <img src="img/seal.png" style="
+         width: 40px; 
          height: auto;
          display: block;
        " alt="logo">
 </div>
+
 <!-- 加载楷体风格字体 Noto Serif SC（中国镜像） -->
 <link href="https://fonts.googleapis.cn/css2?family=Noto+Serif+SC:wght@500&amp;display=swap" rel="stylesheet">
   <div class="reveal">
@@ -196,6 +197,7 @@ Li Zongzhang
 
 <li><a href="#/why-study-econometrics" id="/toc-why-study-econometrics">1.2 Why Study Econometrics?</a></li>
 <li><a href="#/the-methodology-of-econometrics" id="/toc-the-methodology-of-econometrics">1.3 The Methodology of Econometrics</a></li>
+
 
 
 
@@ -1209,12 +1211,17 @@ Price_i = &amp; B_0 + B_1 Takeoff_i + B_2 Takeoff_i^2 + B_3 Advance_i \\
 <h3 id="step-8-利用模型进行预测与经济学解释">Step 8: 利用模型进行预测与经济学解释</h3>
 <p>基于基准回归模型 <span class="math inline">\(\widehat{\beta_1} = 0.0408\)</span> 进行经济效应数值推演：</p>
 <ul>
-<li><strong>案例一：普通全马跑者预测（2014 北京马拉松真实场景）</strong>：
+<li><strong>普通全马跑者预测（2014 北京马拉松真实场景）</strong>：
 <ul>
 <li>全国基准日均 <span class="math inline">\(AQI = 102\)</span>，全马平均耗时 16,581 秒（4 小时 36 分）。</li>
 <li>2014 北马当天遭遇严重雾霾（<span class="math inline">\(AQI = 289\)</span>）： <span class="math display">\[\Delta \ln(AQI) = \ln(289) - \ln(102) \approx 1.0415 \quad (+104.15\%)\]</span> <span class="math display">\[\Delta Finishtime = 16581 \times (0.0408 \times 1.0415) \approx \mathbf{1243 \text{ 秒（约 20.7 分钟）}}\]</span></li>
 </ul></li>
-<li><strong>案例二：前 20 名精英跑者经济损失测算</strong>：
+</ul>
+</section>
+<section class="slide level2">
+
+<ul>
+<li><strong>前 20 名精英跑者经济损失测算</strong>：
 <ul>
 <li>精英跑者平均耗时将增加 <strong>10.2 分钟</strong>。</li>
 <li>北马冠军奖金 4 万美元（要求跑进 2:09:00），亚军与冠军时间仅差 1 分钟奖金即缩水 2 万美元；</li>
