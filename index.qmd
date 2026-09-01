@@ -48,7 +48,7 @@ Gujarati, Damodar N. Essentials of econometrics, the 4th edition. McGraw-Hill/Ir
 
 <img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px"/>Eviews官网<https://eviews.com/home.html>
 
-<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px"/>申请Eviews12 学生版序列号 <http://register1.eviews.com/Lite/>
+<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px"/>申请Eviews12 学生版序列号 <https://register1.eviews.com/Lite12/>
 
 <img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px"/>[如何申请免费的Eviews12学生版?](https://www.bilibili.com/video/BV1Sd4y1371P/)
 
