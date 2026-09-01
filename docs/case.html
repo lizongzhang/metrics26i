@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Li Zongzhang">
+<meta name="dcterms.date" content="2026-09-02">
 
-<title>Case – Econometrics26fall</title>
+<title>小组任务 – Econometrics26fall</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -67,6 +69,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -133,7 +164,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="./case.html" aria-current="page"> 
-<span class="menu-text">Case</span></a>
+<span class="menu-text">小组任务</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -152,16 +183,40 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#案例分析" id="toc-案例分析" class="nav-link active" data-scroll-target="#案例分析">案例分析</a></li>
-  <li><a href="#往届习作" id="toc-往届习作" class="nav-link" data-scroll-target="#往届习作">往届习作</a></li>
-  <li><a href="#学生习作视频及点评" id="toc-学生习作视频及点评" class="nav-link" data-scroll-target="#学生习作视频及点评">学生习作视频及点评</a></li>
-  <li><a href="#讨论汇报" id="toc-讨论汇报" class="nav-link" data-scroll-target="#讨论汇报">讨论/汇报</a>
+  <li><a href="#组队原则与管理" id="toc-组队原则与管理" class="nav-link active" data-scroll-target="#组队原则与管理">组队原则与管理</a>
   <ul class="collapse">
-  <li><a href="#第1次讨论课第4周" id="toc-第1次讨论课第4周" class="nav-link" data-scroll-target="#第1次讨论课第4周">第1次讨论课(第4周)</a></li>
-  <li><a href="#第2次讨论课第10周" id="toc-第2次讨论课第10周" class="nav-link" data-scroll-target="#第2次讨论课第10周">第2次讨论课(第10周)</a></li>
-  <li><a href="#第3次讨论课第15周" id="toc-第3次讨论课第15周" class="nav-link" data-scroll-target="#第3次讨论课第15周">第3次讨论课(第15周)</a></li>
-  <li><a href="#课堂汇报第16周" id="toc-课堂汇报第16周" class="nav-link" data-scroll-target="#课堂汇报第16周">课堂汇报(第16周)</a></li>
+  <li><a href="#组队标准" id="toc-组队标准" class="nav-link" data-scroll-target="#组队标准">组队标准</a></li>
+  <li><a href="#填报与随机分配" id="toc-填报与随机分配" class="nav-link" data-scroll-target="#填报与随机分配">填报与随机分配</a></li>
+  <li><a href="#合作伙伴守则" id="toc-合作伙伴守则" class="nav-link" data-scroll-target="#合作伙伴守则">合作伙伴守则</a></li>
   </ul></li>
+  <li><a href="#小组作业要求" id="toc-小组作业要求" class="nav-link" data-scroll-target="#小组作业要求">小组作业要求</a>
+  <ul class="collapse">
+  <li><a href="#目的" id="toc-目的" class="nav-link" data-scroll-target="#目的">目的</a></li>
+  <li><a href="#选题" id="toc-选题" class="nav-link" data-scroll-target="#选题">选题</a></li>
+  <li><a href="#从想做到能做" id="toc-从想做到能做" class="nav-link" data-scroll-target="#从想做到能做">从“想做”到“能做”</a>
+  <ul class="collapse">
+  <li><a href="#具体-specific" id="toc-具体-specific" class="nav-link" data-scroll-target="#具体-specific">具体 (Specific)</a></li>
+  <li><a href="#有趣-interesting" id="toc-有趣-interesting" class="nav-link" data-scroll-target="#有趣-interesting">有趣 (Interesting)</a></li>
+  <li><a href="#新颖-novel" id="toc-新颖-novel" class="nav-link" data-scroll-target="#新颖-novel">新颖 (Novel)</a></li>
+  <li><a href="#可行-feasible" id="toc-可行-feasible" class="nav-link" data-scroll-target="#可行-feasible">可行 (Feasible)</a></li>
+  <li><a href="#选题负面清单禁止选择" id="toc-选题负面清单禁止选择" class="nav-link" data-scroll-target="#选题负面清单禁止选择">选题“负面清单”（禁止选择）</a></li>
+  </ul></li>
+  <li><a href="#数据要求与来源" id="toc-数据要求与来源" class="nav-link" data-scroll-target="#数据要求与来源">数据要求与来源</a></li>
+  </ul></li>
+  <li><a href="#阶段性评估" id="toc-阶段性评估" class="nav-link" data-scroll-target="#阶段性评估">阶段性评估</a></li>
+  <li><a href="#阶段性讨论" id="toc-阶段性讨论" class="nav-link" data-scroll-target="#阶段性讨论">阶段性讨论</a>
+  <ul class="collapse">
+  <li><a href="#第1轮讨论课-第3-6周选题论证和数据收集" id="toc-第1轮讨论课-第3-6周选题论证和数据收集" class="nav-link" data-scroll-target="#第1轮讨论课-第3-6周选题论证和数据收集">第1轮讨论课 (第3-6周)：选题论证和数据收集</a>
+  <ul class="collapse">
+  <li><a href="#任务1-提交选题信息问卷" id="toc-任务1-提交选题信息问卷" class="nav-link" data-scroll-target="#任务1-提交选题信息问卷"><strong>任务1: 提交选题信息问卷</strong></a></li>
+  </ul></li>
+  <li><a href="#第2轮讨论课-第6-7周数据预处理和初步回归" id="toc-第2轮讨论课-第6-7周数据预处理和初步回归" class="nav-link" data-scroll-target="#第2轮讨论课-第6-7周数据预处理和初步回归">第2轮讨论课 (第6-7周)：数据预处理和初步回归</a></li>
+  <li><a href="#第3轮讨论课-第10周模型函数形式变换虚拟变量的引入" id="toc-第3轮讨论课-第10周模型函数形式变换虚拟变量的引入" class="nav-link" data-scroll-target="#第3轮讨论课-第10周模型函数形式变换虚拟变量的引入">第3轮讨论课 (第10周)：模型函数形式变换、虚拟变量的引入</a></li>
+  <li><a href="#第4轮讨论课-第-12-周模型诊断与完善" id="toc-第4轮讨论课-第-12-周模型诊断与完善" class="nav-link" data-scroll-target="#第4轮讨论课-第-12-周模型诊断与完善">第4轮讨论课 (第 12 周)：模型诊断与完善</a></li>
+  </ul></li>
+  <li><a href="#小组汇报第15-16周" id="toc-小组汇报第15-16周" class="nav-link" data-scroll-target="#小组汇报第15-16周">小组汇报(第15-16周)</a></li>
+  <li><a href="#学生习作演示文稿" id="toc-学生习作演示文稿" class="nav-link" data-scroll-target="#学生习作演示文稿">学生习作演示文稿</a></li>
+  <li><a href="#学生习作点评" id="toc-学生习作点评" class="nav-link" data-scroll-target="#学生习作点评">学生习作点评</a></li>
   </ul>
 </nav>
     </div>
@@ -170,14 +225,26 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Case</h1>
+<h1 class="title">小组任务</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Li Zongzhang </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">2026-09-02</p>
+    </div>
+  </div>
   
     
   </div>
@@ -187,71 +254,480 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><strong>每组4-5人，由组长填写在线问卷，提交分组信息：<a href="https://www.wjx.top/vm/e3AyWsR.aspx#" class="uri">https://www.wjx.top/vm/e3AyWsR.aspx#</a></strong></p>
-<section id="案例分析" class="level1">
-<h1>案例分析</h1>
-<p><img src="img/teacher.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px"><a href="https://lizongzhang.github.io/ee4/teamwork.html">案例分析要求</a></p>
-</section>
-<section id="往届习作" class="level1">
-<h1>往届习作</h1>
-<p><img src="img/link.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px"><a href="https://lizongzhang.github.io/ee4/stu1.html">星巴克门店数量分析</a></p>
-<p><img src="img/link.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px"><a href="https://lizongzhang.github.io/ee4/stu2.html">小米之家门店数量分析</a></p>
-<p><img src="img/link.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px"><a href="https://lizongzhang.github.io/ee4/stu3.html">小米手机价格分析</a></p>
-<p><img src="img/link.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px"><a href="https://lizongzhang.github.io/ee4/stu4.html">永辉超市门店数量分析</a></p>
-</section>
-<section id="学生习作视频及点评" class="level1">
-<h1>学生习作视频及点评</h1>
-<p><img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px"><a href="https://www.bilibili.com/video/BV1A44y1D73Q/">第6章虚拟变量小组作业讲评–20国贸</a></p>
-<p><img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px"><a href="https://www.bilibili.com/video/BV1pM411U7DH/">第7-9章小组作业讲评 20经济</a></p>
-</section>
-<section id="讨论汇报" class="level1">
-<h1>讨论/汇报</h1>
-<section id="第1次讨论课第4周" class="level2">
-<h2 class="anchored" data-anchor-id="第1次讨论课第4周">第1次讨论课(第4周)</h2>
-<p>选题/数据收集/可行性/模型设定</p>
-</section>
-<section id="第2次讨论课第10周" class="level2">
-<h2 class="anchored" data-anchor-id="第2次讨论课第10周">第2次讨论课(第10周)</h2>
+<p><strong>提交分组信息：<a href="https://www.wjx.top/vm/rXASrvi.aspx#" class="uri">https://www.wjx.top/vm/rXASrvi.aspx#</a> </strong></p>
+<section id="组队原则与管理" class="level1">
+<h1>组队原则与管理</h1>
+<section id="组队标准" class="level2">
+<h2 class="anchored" data-anchor-id="组队标准">组队标准</h2>
 <ul>
-<li><p>运用第4，5，6章方法</p></li>
-<li><p>准备的文件：</p>
+<li><strong>标准规模</strong>：每组原则上由 <strong>4 位同学</strong>组成。</li>
+<li><strong>人数调节</strong>：若班级总人数无法被 4 完全整除，允许出现个别 <strong>3人组</strong> 或 <strong>5人组</strong>。</li>
+<li><strong>工作量对等原则</strong>：
 <ul>
-<li><p>EViews Workfile 工作文件</p></li>
-<li><p>PPT文件</p>
-<ul>
-<li><p>数据来源</p></li>
-<li><p>变量含义</p></li>
-<li><p>尝试的回归方程估计结果截图</p></li>
-<li><p>哪个模型最好，为什么？</p></li>
-<li><p>主要结论</p></li>
-</ul></li>
+<li><strong>3 人组</strong>：需完成与标准组一致的要求，建议由综合能力较强的同学组成。</li>
+<li><strong>5 人组</strong>：为抵消人力优势，该组需<strong>增加50%的有效样本量</strong>。</li>
 </ul></li>
 </ul>
 </section>
-<section id="第3次讨论课第15周" class="level2">
-<h2 class="anchored" data-anchor-id="第3次讨论课第15周">第3次讨论课(第15周)</h2>
+<section id="填报与随机分配" class="level2">
+<h2 class="anchored" data-anchor-id="填报与随机分配">填报与随机分配</h2>
 <ul>
-<li><p>运用第7, 8, 9章方法</p></li>
-<li><p>准备的文件：</p>
+<li><strong>填报限期</strong>：请各组长于 <strong>第 2 周下课前</strong> 完成本问卷的组员名单填报。</li>
+<li><strong>逾期后果</strong>：逾期（第 2 周下课后）仍未提交名单的同学，将视为放弃自主组队权利。</li>
+<li><strong>强制指派</strong>：届时，老师将根据剩余名单进行随机分配或合并，确保每位同学都有组归属并能按时开展小组作业。</li>
+</ul>
+</section>
+<section id="合作伙伴守则" class="level2">
+<h2 class="anchored" data-anchor-id="合作伙伴守则">合作伙伴守则</h2>
 <ul>
-<li><p>EViews Workfile 工作文件</p></li>
-<li><p>PPT文件</p>
+<li><strong>共识建立</strong>：请同学们在组队时充分沟通，确保组员在学习态度和任务分配上达成共识。</li>
+<li><strong>剔除机制</strong>：若组内出现成员经多次沟通仍严重不配合的行为，小组可提交沟通记录并向老师申请剔除该组员。</li>
+<li><strong>申请限期</strong>：剔除申请截止于 <strong>第 10 周</strong>。</li>
+<li><strong>独立惩罚</strong>：被剔除的成员需独立完成小组作业及实验报告。</li>
+</ul>
+</section>
+</section>
+<section id="小组作业要求" class="level1">
+<h1>小组作业要求</h1>
+<section id="目的" class="level2">
+<h2 class="anchored" data-anchor-id="目的">目的</h2>
 <ul>
-<li><p>对模型进行诊断和改进</p></li>
-<li><p>设定误差的检验</p></li>
-<li><p>多重共线性诊断</p></li>
-<li><p>异方差的诊断和改进</p></li>
-<li><p>主要结论</p></li>
-</ul></li>
+<li><strong>实践应用</strong>：运用经济计量方法分析现实问题。</li>
+<li><strong>过程体验</strong>：完整体验从提出观点、建立模型、验证观点的经济计量分析全过程。</li>
+<li><strong>最终产出</strong>：提交演示文件、汇报展示、实验报告。</li>
+</ul>
+<blockquote class="blockquote">
+<p><strong>最好的学习方法</strong>： “The best way to learn is to do; the worst way to teach is to talk.” —— Paul Halmos (1916-2006)</p>
+</blockquote>
+</section>
+<section id="选题" class="level2">
+<h2 class="anchored" data-anchor-id="选题">选题</h2>
+</section>
+<section id="从想做到能做" class="level2">
+<h2 class="anchored" data-anchor-id="从想做到能做">从“想做”到“能做”</h2>
+<section id="具体-specific" class="level3">
+<h3 class="anchored" data-anchor-id="具体-specific">具体 (Specific)</h3>
+<ul>
+<li><strong>因果逻辑明确</strong>：选题必须明确为 <strong>变量 X 如何影响变量 Y</strong> 的实证分析框架。</li>
+<li><strong>观测单元清晰</strong>：拒绝宏大叙事，必须明确数据中的每一行代表什么（例如：一个学生、一架航班、或是一个城市。</li>
+</ul>
+</section>
+<section id="有趣-interesting" class="level3">
+<h3 class="anchored" data-anchor-id="有趣-interesting">有趣 (Interesting)</h3>
+<ul>
+<li><strong>好奇心驱动</strong>：选题应源于对现实生活的观察与好奇。</li>
+<li><strong>价值探索</strong>：通过实证分析得出具有探索意义、能为他人提供参考价值的结论。</li>
+</ul>
+</section>
+<section id="新颖-novel" class="level3">
+<h3 class="anchored" data-anchor-id="新颖-novel">新颖 (Novel)</h3>
+<ul>
+<li><strong>时效性</strong>：鼓励使用 2024-2025年的最新数据，分析如电竞酒店、新能源车等新兴细分市场。</li>
+</ul>
+</section>
+<section id="可行-feasible" class="level3">
+<h3 class="anchored" data-anchor-id="可行-feasible">可行 (Feasible)</h3>
+<ul>
+<li><p><strong>核心前提</strong>：必须确保能够采集到不少于<strong>60 个</strong>有效样本的截面数据 。</p></li>
+<li><p><strong>可量化</strong>：变量设计必须满足课程要求的硬性维度，确保模型能够有效运行。</p></li>
+<li><p><strong>参考选题</strong>：</p>
+<ul>
+<li><strong>新媒体分析</strong>：小红书帖文/B站视频互动量（Y）影响因素分析。</li>
+<li><strong>二手车市场</strong>：二手新能源车价格（Y）与行驶里程、购车年限及品牌类型之间的关系。</li>
+<li><strong>消费生活</strong>：校园周边奶茶定价（Y）与产品热量、配料数及品牌连锁性质的相关性。</li>
+<li><strong>二手电子产品</strong>：iPad 二手价格（Y）受存储容量、已激活时长及配件完整度影响。</li>
+<li><strong>游戏研究</strong>：数字游戏定价（Y）与好评率、安装包大小及是否支持中文的相关性。</li>
+<li><strong>即时配送服务</strong>：外卖配送费（Y）如何随配送距离、订单金额及天气状况波动。</li>
+<li><strong>品牌扩张策略</strong>：连锁店门店数（Y）与区域商务氛围、竞品密度及城市等级的关系。</li>
+<li><strong>机票价格分析</strong>：特定航线（国际/国内）的价格影响因素。</li>
+<li><strong>客房价格分析</strong>：连锁酒店、星级酒店、民宿的价格研究。</li>
+<li><strong>不限于经济类话题</strong>：CET4成绩影响因素、跑步配速分析等。</li>
 </ul></li>
 </ul>
 </section>
-<section id="课堂汇报第16周" class="level2">
-<h2 class="anchored" data-anchor-id="课堂汇报第16周">课堂汇报(第16周)</h2>
-<p><strong>后续在QQ群发布</strong></p>
-
-
+<section id="选题负面清单禁止选择" class="level3">
+<h3 class="anchored" data-anchor-id="选题负面清单禁止选择">选题“负面清单”（禁止选择）</h3>
+<ul>
+<li><strong>陈旧同质化</strong>：大学生每月生活费影响因素分析、食堂就餐满意度影响因素分析</li>
+<li><strong>选题宏大</strong>：全球各国通货膨胀率与经济增长的关系研究、“一带一路”对全球贸易格局的影响、互联网技术对人类文明进化的作用</li>
+<li><strong>数据类型错误</strong>：中国房地产市场的波动逻辑分析、人民币汇率波动影响因素、城乡收入分配不平等分析</li>
+<li><strong>数据无法获取</strong>：某知名快消品牌内部营销成本与利润分析、外卖骑手实际时薪影响因素</li>
+</ul>
 </section>
+</section>
+<section id="数据要求与来源" class="level2">
+<h2 class="anchored" data-anchor-id="数据要求与来源">数据要求与来源</h2>
+<ul>
+<li><p><strong>数据类型</strong>：必须使用<strong>截面数据</strong>，严禁使用时间序列或面板数据。</p></li>
+<li><p><strong>样本容量</strong>：有效个案数量不得低于 <strong>60</strong> 个（若是5人组，有效个案数量不得低于90）。</p></li>
+</ul>
+<blockquote class="blockquote">
+<p>📌 <strong>有效样本</strong>指经过清洗（缺失值、异常值处理等）后，实际用于回归模型估计的观测数量。</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>💡 为了保证最终回归模型能使用足够的有效样本，建议在数据收集时不要刚好卡在最低门槛，而是预留一定的“缓冲量”。</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>💡 推荐实际收集目标：70–80 个（个人） / 100–110 个（5人组）。在最低要求的基础上多收集 10–20%（约多10–20个观测），以应对数据清洗过程中可能出现的缺失值或异常值导致的样本量减少。</p>
+</blockquote>
+<ul>
+<li><p>❗<strong>重要提示</strong>：请勿选择以“省级行政区划”为观测单元的选题（如各省居民消费分析），我国省级行政区总数为 34 个（23 个省、5 个自治区、4 个直辖市和 2 个特别行政区）</p></li>
+<li><p><strong>变量要求（数据收集阶段）</strong>：</p>
+<ul>
+<li>定量变量（Continuous/Quantitative Variables）： 至少<strong>4 个</strong>（确保 1 个作为被解释变量后，仍有充足的候选解释变量）。</li>
+<li>定性变量（Categorical/Qualitative Variables）： 至少 <strong>2 个</strong>。</li>
+</ul></li>
+<li><p><strong>模型设定要求（实证分析阶段）</strong>：</p>
+<ul>
+<li><strong>被解释变量<span class="math inline">\(Y\)</span></strong>：必须为<strong>定量变量</strong></li>
+<li><strong>解释变量构成</strong>：最终进入回归模型的变量应至少包含 <strong>2 个定量变量</strong>和 <strong>1个定性变量</strong></li>
+</ul></li>
+<li><p><strong>数据收集渠道</strong>：网页数据、数据库、问卷调查、APP等 。</p></li>
+</ul>
+<blockquote class="blockquote">
+<p>🚫 拒绝“常量”变量： 请务必检查你的数据。确保定量变量是有波动的，如果所有个案的数值都完全一样（例如：所有人的“受教育年限”都是 16），该变量将无法进入回归模型。</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>🧩 定性变量精简化： 分类不宜过细。建议将定性变量的类别控制在 2-4 个 之间。如果分类太多（如：具体省份），请在分析前按逻辑进行归并。</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>📦 建立“变量备用库”： 建议在数据收集阶段多准备几个备选变量。这样万一核心变量不显著，你可以立即调用备选变量进行调整，无需再次辛苦收集数据。</p>
+</blockquote>
+<details>
+<summary>
+🚩选题常见错误
+</summary>
+<p>请各小组对照下表，核实你们的选题是否存在以下逻辑或格式问题。存在下述任何一种情况的申请，将被要求重选。</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">错误类型</th>
+<th style="text-align: left;">典型错误示例</th>
+<th style="text-align: left;">为什么不行？</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>观测单元错误</strong></td>
+<td style="text-align: left;">以“年份”为单元（如：2000-2024年我国GDP分析）</td>
+<td style="text-align: left;">本次任务严格要求使用<strong>截面数据</strong>，禁止使用时间序列数据。</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>样本量不足</strong></td>
+<td style="text-align: left;">以“省级行政区”为单元（如：31个省的消费分析）</td>
+<td style="text-align: left;"><strong>样本量极小</strong>（N=31），统计效力严重不足，无法支持稳健的回归分析。</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>变量类型错位</strong></td>
+<td style="text-align: left;">被解释变量 <span class="math inline">\(Y\)</span> 是“是否就业”（0=否, 1=是）</td>
+<td style="text-align: left;">被解释变量必须为<strong>定量变量</strong>，定性变量作为 <span class="math inline">\(Y\)</span> 需使用特殊模型。</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>解释变量单一</strong></td>
+<td style="text-align: left;">仅收集了 1 个定量变量和 1 个定性变量</td>
+<td style="text-align: left;">无法满足模型设定要求（必须包含 <span class="math inline">\(\ge\)</span> 2个定量和 <span class="math inline">\(\ge\)</span> 1个定性解释变量）。</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>数据逻辑自循环</strong></td>
+<td style="text-align: left;"><span class="math inline">\(Y\)</span> 是“考试总分”，<span class="math inline">\(X\)</span> 是“数学分”、“语文分”</td>
+<td style="text-align: left;">变量间存在<strong>数学恒等关系</strong>而非因果统计关系，回归系数无意义。</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="blockquote">
+<p><strong>✅ 检查</strong> 1. 有效样本量是否达到要求（60个/五人组90个）？ 2. 你的数据是否确保每一行代表一个观测个体（如：人、公司）？ 3. 你的因变量 <span class="math inline">\(Y\)</span> 是否可以进行求平均值等数值运算？</p>
+</blockquote>
+<hr>
+</details></section>
+</section>
+<section id="阶段性评估" class="level1">
+<h1>阶段性评估</h1>
+<p>本小组实证研究任务是<strong>贯穿整个学期</strong>的系统性工程，与课程教学进度同步推进。请各组注意，最终成绩评定不仅取决于期末汇报，以下过程指标也是<strong>小组作业评定的重要依据</strong> ：</p>
+<ol type="1">
+<li><strong>同步推进</strong>：是否在规定教学周期内完成对应的实证阶段。</li>
+<li><strong>讨论过程</strong>：小组成员在课堂讨论课中的参与度与协作表现。</li>
+<li><strong>工作态度</strong>：数据采集的真实性、变量选取的严谨性以及文档准备的完整度。</li>
+<li><strong>反馈改进</strong>：是否认真听取老师在讨论课中给出的指导意见，并<strong>根据建议作出实质性的修正与改进</strong> 。</li>
+</ol>
+<hr>
+</section>
+<section id="阶段性讨论" class="level1">
+<h1>阶段性讨论</h1>
+<section id="第1轮讨论课-第3-6周选题论证和数据收集" class="level2">
+<h2 class="anchored" data-anchor-id="第1轮讨论课-第3-6周选题论证和数据收集">第1轮讨论课 (第3-6周)：选题论证和数据收集</h2>
+<section id="任务1-提交选题信息问卷" class="level3">
+<h3 class="anchored" data-anchor-id="任务1-提交选题信息问卷"><strong>任务1: 提交选题信息问卷</strong></h3>
+<p><a href="https://v.wjx.cn/vm/rXTAiul.aspx#" class="uri">https://v.wjx.cn/vm/rXTAiul.aspx#</a></p>
+<details>
+<summary>
+点击展开
+</summary>
+<ul>
+<li><p><strong>核心任务</strong>：确立选题方向，通过初步数据探索验证模型逻辑的可行性。</p></li>
+<li><p><strong>学生准备事项（需提交/展示）</strong>：</p>
+<ul>
+<li><strong>填写选题信息问卷(请在讨论课前完成)</strong>：<a href="https://v.wjx.cn/vm/rXTAiul.aspx#" class="uri">https://v.wjx.cn/vm/rXTAiul.aspx#</a></li>
+<li><strong>数据文件</strong>： 展示已获取的数据概况，确保截面数据有效样本 <span class="math inline">\(n \ge 60\)</span>（5人组 <span class="math inline">\(n \ge 90\)</span>）。</li>
+<li><strong>数据清洗</strong>：
+<ul>
+<li><strong>变量命名的规范化 (Variable Naming)</strong>
+<ul>
+<li>全英文/拼音：变量名必须以英文字母开头。严禁使用中文、空格或特殊符号。</li>
+<li>禁用字符：不能包含中划线/短横线（-）、小圆点（.）。</li>
+<li>蛇形命名（snake_case）：所有字母小写，单词之间用下划线（_）连接（如 laptop_price）。</li>
+<li>见名知意： 严禁使用 <span class="math inline">\(X1, Y\)</span> 等无意义符号，确保代码可读性。用 wage 而不是Y，用 edu 而不是 X1。</li>
+</ul></li>
+<li><strong>异常值处理</strong>
+<ul>
+<li>可视化检查：对定量变量绘制直方图或箱线图。</li>
+<li>优先采用 <span class="math inline">\(3 \times IQR\)</span> 规则 剔除极端值，以保留更多信息；若数据依然分布极度不均，再考虑 <span class="math inline">\(1.5 \times IQR\)</span>。 (注：剔除数值大于 <span class="math inline">\(Q3 + 3 \times IQR\)</span> 或小于 <span class="math inline">\(Q1 - 3 \times IQR\)</span> 的个案)。</li>
+<li>逻辑检查：务必剔除如“价格为0”、“年龄为负”等逻辑错误的个案。</li>
+</ul></li>
+<li><strong>定性变量分类优化</strong>：
+<ul>
+<li><strong>合并原则</strong>：若某个分类下的个案数量<strong>少于 10 个</strong>，建议合并。合并后建议每组样本数 <span class="math inline">\(&gt; 20\)</span>。</li>
+<li><strong>逻辑合并</strong>：合并应基于逻辑相似性（如：将“硕士”和“博士”合并为“研究生”）。</li>
+</ul></li>
+<li><strong>初步相关性分析</strong>：
+<ul>
+<li>报告 <span class="math inline">\(Y\)</span> 与各定量解释变量 <span class="math inline">\(X\)</span> 之间的<strong>相关系数矩阵</strong>。</li>
+<li>核心解释变量与 <span class="math inline">\(Y\)</span> 的相关系数绝对值 <span class="math inline">\(|r| &gt; 0.2-0.3\)</span>。</li>
+<li>确保变量间存在基本关联，避免后期回归模型因相关性太弱导致“全盘不显著”。</li>
+<li>估计全变量的回归模型，若 <span class="math inline">\(p\)</span> 值普遍较大且 <span class="math inline">\(R^2\)</span> 极低。需要重新考虑定量变量的测度，重新选取样本。</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+<p>&lt;&gt;</p>
+<hr>
+</details></section>
+</section>
+<section id="第2轮讨论课-第6-7周数据预处理和初步回归" class="level2">
+<h2 class="anchored" data-anchor-id="第2轮讨论课-第6-7周数据预处理和初步回归">第2轮讨论课 (第6-7周)：数据预处理和初步回归</h2>
+<details>
+<summary>
+点击展开
+</summary>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>在本阶段，各小组需完成原始数据的清洗、变量规范化命名及初步的描述性统计分析。这不仅是为了确保后续回归模型的稳健性，更是为了培养专业的数据处理习惯。</p>
+</div>
+</div>
+<p>1 样本量基本要求</p>
+<p>根据小组成员人数，有效样本量（剔除异常与错误后）需满足： - <strong>常规小组（≤ 4人）：</strong> <span class="math inline">\(n \ge 60\)</span> - <strong>5人小组：</strong> <span class="math inline">\(n \ge 90\)</span></p>
+<p>2 数据清洗标准 (Data Cleaning)</p>
+<p>2.1 变量命名规范化 (Variable Naming)</p>
+<p>为了确保分析软件（Stata/R/Python/EViews）的兼容性，所有变量名必须遵循： - <strong>命名格式：</strong> 采用 <strong>蛇形命名法（snake_case）</strong>，所有字母小写，单词之间用下划线 <code>_</code> 连接。 - <strong>字符限制：</strong> 严禁使用中文、空格或特殊符号。必须以英文字母开头。 - <strong>禁用符号：</strong> 严禁包含中划线/短横线 <code>-</code> 或小圆点 <code>.</code>。 - <strong>语义化命名：</strong> 确保“见名知意”。严禁使用 <span class="math inline">\(X1, X2, Y\)</span> 等代号。例如：用 <code>wage</code> 而不是 <code>y</code>，用 <code>edu_years</code> 而不是 <code>x1</code>。</p>
+<p>2.2 异常值处理与逻辑检查</p>
+<ol type="1">
+<li><p><strong>可视化检查：</strong> 对所有定量变量绘制直方图或箱线图。</p></li>
+<li><p><strong>IQR 规则：</strong> - 优先采用 <strong><span class="math inline">\(3 \times IQR\)</span></strong> 规则剔除极端值：</p>
+<ul>
+<li><span class="math inline">\(Value &gt; Q3 + 3 \times IQR\)</span> 或 <span class="math inline">\(Value &lt; Q1 - 3 \times IQR\)</span>。</li>
+<li>若数据依然极度不均，可考虑 <strong><span class="math inline">\(1.5 \times IQR\)</span></strong> 规则。</li>
+</ul></li>
+<li><p><strong>逻辑校验：</strong> 强制剔除逻辑错误的个案（如价格 <span class="math inline">\(\le 0\)</span>、年龄为负等）。</p></li>
+</ol>
+<p>2.3 定性变量分类优化</p>
+<ul>
+<li><p><strong>合并原则：</strong> 若某个分类下的个案数量 <strong>少于 10 个</strong>，必须进行合并。合并后建议每组样本数 <span class="math inline">\(&gt; 20\)</span>。</p></li>
+<li><p><strong>逻辑合并：</strong> 合并应基于逻辑相似性。例如：将“硕士”和“博士”合并为“研究生”。</p></li>
+</ul>
+<p>3 初步统计分析</p>
+<p>3.1 相关性自查 - 报告被解释变量 <span class="math inline">\(Y\)</span> 与各定量解释变量 <span class="math inline">\(X\)</span> 之间的 <strong>Pearson 相关系数矩阵</strong>。 - 核心解释变量与 <span class="math inline">\(Y\)</span> 的相关系数绝对值 <span class="math inline">\(|r|\)</span> 建议在 <span class="math inline">\(0.2 - 0.3\)</span> 以上。</p>
+<p>3.2 回归质量预警 进行全变量 OLS 初步回归，若出现以下情况，需重新考虑变量测度或重新抽样： - <span class="math inline">\(p\)</span> 值普遍较大且模型 <span class="math inline">\(R^2\)</span> 极低（例如 <span class="math inline">\(&lt; 0.01\)</span>）。</p>
+<p>4 提交物要求</p>
+<p>请提交一个名为 <strong><code>组号_组长姓名_研究主题.xlsx</code></strong> 的 Excel 文件。该文件必须严格包含以下四个命名的表单（Sheet）：</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>表单名称</th>
+<th>内容要求</th>
+<th>包含指标</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong><code>data</code></strong></td>
+<td>清洗后的有效数据</td>
+<td>表头为规范化的英文变量名</td>
+</tr>
+<tr class="even">
+<td><strong><code>desc</code></strong></td>
+<td>描述性统计分析</td>
+<td><strong>均值、中位数、标准差、最小值、最大值</strong> 、定量变量的直方图</td>
+</tr>
+<tr class="odd">
+<td><strong><code>cor</code></strong></td>
+<td>相关系数矩阵</td>
+<td><span class="math inline">\(Y\)</span> 与定量 <span class="math inline">\(X\)</span> 的 Pearson 相关系数</td>
+</tr>
+<tr class="even">
+<td><strong><code>reg</code></strong></td>
+<td>初步回归结果</td>
+<td>系数、标准误、<span class="math inline">\(t\)</span> 值、<span class="math inline">\(p\)</span> 值、<span class="math inline">\(R^2\)</span>、调整后 <span class="math inline">\(R^2\)</span></td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>注意：严禁合并表单或随意更改 Sheet 名称。</p>
+</div>
+</div>
+<p>&lt;&gt;</p>
+<hr>
+</details></section>
+<section id="第3轮讨论课-第10周模型函数形式变换虚拟变量的引入" class="level2">
+<h2 class="anchored" data-anchor-id="第3轮讨论课-第10周模型函数形式变换虚拟变量的引入">第3轮讨论课 (第10周)：模型函数形式变换、虚拟变量的引入</h2>
+<details>
+<summary>
+点击展开
+</summary>
+<p>分析方法：教材第5-6章关于函数形式变换、虚拟变量的引入</p>
+<p>核心任务：针对同一被解释变量，依次尝试并对比以下四类扩展模型：</p>
+<ul>
+<li><p>虚拟变量模型：引入定性变量。</p></li>
+<li><p>双对数模型：探究因变量与自变量之间的弹性关系。</p></li>
+<li><p>平方项模型：检验是否存在非线性趋势（如边际效应递减）。</p></li>
+<li><p>交互项模型：检验某个解释变量是否对另一个变量具有调节效应。</p></li>
+</ul>
+<p>思考问题：在对比上述模型后，基于统计显著性（Stars）、系数的符号是否符合预期，拟合优度（<span class="math inline">\(R^2\)</span>），你认为哪个模型最合适？请简述理由。</p>
+<p>提交物要求</p>
+<p>请提交一个名为 <strong><code>组号_组长姓名_研究主题_chap5-6.xlsx</code></strong> 的 Excel 文件。该文件必须严格包含以下四个命名的表单（Sheet）：</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>表单名称</th>
+<th>内容要求</th>
+<th>包含指标</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong><code>data</code></strong></td>
+<td>清洗后的数据</td>
+<td>表头为规范化的英文变量名</td>
+</tr>
+<tr class="even">
+<td><strong><code>var</code></strong></td>
+<td>变量的含义及单位</td>
+<td>列出变量名称，变量含义及单位，定性变量的频数分布表</td>
+</tr>
+<tr class="odd">
+<td><strong><code>reg</code></strong></td>
+<td>回归模型</td>
+<td>所有尝试过的回归模型的估计结果</td>
+</tr>
+<tr class="even">
+<td><strong><code>best</code></strong></td>
+<td>最优模型</td>
+<td>选择该模型的理由</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>注意：严禁合并表单或随意更改 Sheet 名称。</p>
+</div>
+</div>
+<p>&lt;&gt;</p>
+<hr>
+</details></section>
+<section id="第4轮讨论课-第-12-周模型诊断与完善" class="level2">
+<h2 class="anchored" data-anchor-id="第4轮讨论课-第-12-周模型诊断与完善">第4轮讨论课 (第 12 周)：模型诊断与完善</h2>
+<details>
+<summary>
+点击展开
+</summary>
+<ul>
+<li><strong>应用方法</strong>：运用教材 <strong>第 7、8、9 章</strong> 的方法。</li>
+<li><strong>需准备的文件</strong>：
+<ol type="1">
+<li><strong>EViews Workfile</strong>：包含所有诊断检验过程的最新版本。</li>
+<li><strong>PPT 汇报演示</strong>：
+<ul>
+<li><strong>诊断与改进</strong>：汇报针对初始模型的优化路径。</li>
+<li><strong>设定误差检验</strong>：是否存在遗漏变量或函数形式设定错误。</li>
+<li><strong>多重共线性</strong>：VIF 检验及处理方案。</li>
+<li><strong>异方差诊断</strong>：White 检验/BP 检验及加权最小二乘法等改进措施。</li>
+<li><strong>最终结论</strong>：基于稳健模型得到的最终实证结论 [cite: 2026-01-31]。</li>
+</ul></li>
+</ol></li>
+</ul>
+<p>&lt;&gt;</p>
+<hr>
+</details></section>
+</section>
+<section id="小组汇报第15-16周" class="level1">
+<h1>小组汇报(第15-16周)</h1>
+<p><img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px"><a href="https://lizongzhang.github.io/emetrics26/pre.html" target="_blank">小组汇报要求</a></p>
+</section>
+<section id="学生习作演示文稿" class="level1">
+<h1>学生习作演示文稿</h1>
+<p><img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px"><a href="https://lizongzhang.github.io/ee4/stu1.html">星巴克门店数量分析——第5章</a></p>
+<p><img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px"><a href="https://lizongzhang.github.io/ee4/stu2.html">小米之家门店数量分析——第6章</a></p>
+<p><img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px"><a href="https://lizongzhang.github.io/ee4/stu4.html">永辉超市门店数量分析——第6章</a></p>
+<p><img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px"><a href="https://lizongzhang.github.io/ee4/stu3.html">小米手机价格分析——第7-9章</a></p>
+<details>
+<summary style="cursor: pointer; font-weight: bold;">
+视频点赞分析——20金融3陈瑞祺(点击展开)
+</summary>
+<p>
+如果想在新窗口打开 PDF，请点这里： <a href="img/crq.pdf" target="_blank" rel="noopener">在新标签页中查看 PDF</a>
+</p>
+<iframe src="img/crq.pdf" width="100%" height="800" style="border: none;" allowfullscreen="">
+<!-- 备用内容（若浏览器不支持 iframe） -->
+<p>
+你的浏览器无法嵌入 PDF，请 <a href="img/crq.pdf" target="_blank" rel="noopener">点此下载/查看 PDF</a>.
+</p>
+</iframe>
+</details>
+</section>
+<section id="学生习作点评" class="level1">
+<h1>学生习作点评</h1>
+<p><img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px"><a href="https://www.bilibili.com/video/BV1A44y1D73Q/">第6章虚拟变量小组作业讲评——20国贸</a></p>
+<p><img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px"><a href="https://www.bilibili.com/video/BV1pM411U7DH/">第7-9章小组作业讲评——20经济</a></p>
+
+
 </section>
 
 </main> <!-- /main -->
