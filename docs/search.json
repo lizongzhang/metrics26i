@@ -327,5 +327,243 @@
     "title": "小组任务",
     "section": "第4轮讨论课 (第 12 周)：模型诊断与完善",
     "text": "第4轮讨论课 (第 12 周)：模型诊断与完善\n\n\n点击展开\n\n\n应用方法：运用教材 第 7、8、9 章 的方法。\n需准备的文件：\n\nEViews Workfile：包含所有诊断检验过程的最新版本。\nPPT 汇报演示：\n\n诊断与改进：汇报针对初始模型的优化路径。\n设定误差检验：是否存在遗漏变量或函数形式设定错误。\n多重共线性：VIF 检验及处理方案。\n异方差诊断：White 检验/BP 检验及加权最小二乘法等改进措施。\n最终结论：基于稳健模型得到的最终实证结论 [cite: 2026-01-31]。\n\n\n\n&lt;&gt;"
+  },
+  {
+    "objectID": "L2slide.html#outline",
+    "href": "L2slide.html#outline",
+    "title": "Chapter 2  Basic Ideas of Linear Regression The Two-Variable Model",
+    "section": "Outline",
+    "text": "Outline\n\n2.1 The Meaning of Regression\n2.2 ~ 2.5\n\nThe Population Regression Function (PRF)\nThe Sample Regression Function (SRF)\n\n2.6 ~ 2.10\n\nThe Special Meaning of “Linear”\nThe Method of Ordinary Least Squares (OLS)\nFeatures of the OLS estimators"
+  },
+  {
+    "objectID": "L2slide.html#historical-origin-of-the-term-regression",
+    "href": "L2slide.html#historical-origin-of-the-term-regression",
+    "title": "Chapter 2  Basic Ideas of Linear Regression The Two-Variable Model",
+    "section": "2.1 Historical Origin of the Term Regression",
+    "text": "2.1 Historical Origin of the Term Regression\n“回归”术语的历史起源\nFrancis Galton (1822–1911)\n\nhttps://galton.org/\nFamily Likeness in Stature\nProceedings of Royal Society, London, vol.40, 1886, pp.42–72\nLaw of universal regression（普遍回归定律）"
+  },
+  {
+    "objectID": "L2slide.html#galtons-height-data",
+    "href": "L2slide.html#galtons-height-data",
+    "title": "Chapter 2  Basic Ideas of Linear Regression The Two-Variable Model",
+    "section": "Galton’s Height Data",
+    "text": "Galton’s Height Data\n\nFamily: The family that the child belongs to (1 to 205)\nFather: The father’s height, in inches\nMother: The mother’s height, in inches\nGender: Male (M) or Female (F)\nHeight: The height of the child, in inches\nKids: The number of kids in the family\n\nData set has 898 cases.\n(Original family 136A relabeled as 205)\nSource: https://randomservices.org/random/data/Galton.html"
+  },
+  {
+    "objectID": "L2slide.html#history-of-regression",
+    "href": "L2slide.html#history-of-regression",
+    "title": "Chapter 2  Basic Ideas of Linear Regression The Two-Variable Model",
+    "section": "History of Regression",
+    "text": "History of Regression\n\nRegression Towards Mediocrity in Hereditary Stature\nFrancis Galton (1886)\nKey concept:\nReversion to mediocrity → Regression to mediocrity → Regression to the mean\nTall parents tend to have children closer to the average height\n\nShort parents also tend to have children closer to the average height"
+  },
+  {
+    "objectID": "L2slide.html#the-meaning-of-regression",
+    "href": "L2slide.html#the-meaning-of-regression",
+    "title": "Chapter 2  Basic Ideas of Linear Regression The Two-Variable Model",
+    "section": "2.1 The Meaning of Regression",
+    "text": "2.1 The Meaning of Regression\nRegression analysis is concerned with the study of the dependence of one variable (the dependent variable) on one or more other variables (the explanatory variables)."
+  },
+  {
+    "objectID": "L2slide.html#example-sons-height-fathers-height",
+    "href": "L2slide.html#example-sons-height-fathers-height",
+    "title": "Chapter 2  Basic Ideas of Linear Regression The Two-Variable Model",
+    "section": "Example: Son’s Height & Father’s Height",
+    "text": "Example: Son’s Height & Father’s Height\nHypothetical distribution of sons’ heights corresponding to given heights of fathers.\n\nConditional mean of son’s height increases with father’s height\nBut there is still substantial variation around the mean"
+  },
+  {
+    "objectID": "L2slide.html#other-examples",
+    "href": "L2slide.html#other-examples",
+    "title": "Chapter 2  Basic Ideas of Linear Regression The Two-Variable Model",
+    "section": "Other Examples",
+    "text": "Other Examples\nAge & Height\nHypothetical distribution of heights corresponding to selected ages.\nCrop Yield depends on: - Temperature - Rainfall - Sunshine - Fertilizer"
+  },
+  {
+    "objectID": "L2slide.html#terminology-in-regression-analysis",
+    "href": "L2slide.html#terminology-in-regression-analysis",
+    "title": "Chapter 2  Basic Ideas of Linear Regression The Two-Variable Model",
+    "section": "Terminology in Regression Analysis",
+    "text": "Terminology in Regression Analysis\n\n\n\nY\nX\n\n\n\n\ndependent variable (应变量)\nindependent variable (自变量)\n\n\nexplained variable (被解释变量)\nexplanatory variable (解释变量)\n\n\nregressand (回归子)\nregressor (回归元)\n\n\npredicted variable (被预测变量)\npredictor variable (预测变量)"
+  },
+  {
+    "objectID": "L2slide.html#regression-causation",
+    "href": "L2slide.html#regression-causation",
+    "title": "Chapter 2  Basic Ideas of Linear Regression The Two-Variable Model",
+    "section": "Regression & Causation",
+    "text": "Regression & Causation\n\nRegression ≠ Causation\nEstablishing causation requires:\n\nTheory\nCommon sense\nCareful research design"
+  },
+  {
+    "objectID": "L2slide.html#spurious-regression-伪虚假回归",
+    "href": "L2slide.html#spurious-regression-伪虚假回归",
+    "title": "Chapter 2  Basic Ideas of Linear Regression The Two-Variable Model",
+    "section": "Spurious Regression 伪（虚假）回归",
+    "text": "Spurious Regression 伪（虚假）回归\nExamples of nonsense correlations:\n\nSize of vocabulary (X) & Writing speed (Y)\nSize of shoes (X) & Math score (Y)\nNumber of elephants (X) & Crime rate (Y)\n\nFamous site: tylervigen.com/spurious-correlations"
+  },
+  {
+    "objectID": "L2slide.html#spurious-regression-examples",
+    "href": "L2slide.html#spurious-regression-examples",
+    "title": "Chapter 2  Basic Ideas of Linear Regression The Two-Variable Model",
+    "section": "Spurious Regression Examples",
+    "text": "Spurious Regression Examples\nUS spending on science, space, and technology\ncorrelates with\nSuicides by hanging, strangulation and suffocation\nCorrelation: 99.79% (\\(r = 0.9979\\))\nUS crude oil imports from Norway\ncorrelates with\nDrivers killed in collision with railway train"
+  },
+  {
+    "objectID": "L2slide.html#another-spurious-example",
+    "href": "L2slide.html#another-spurious-example",
+    "title": "Chapter 2  Basic Ideas of Linear Regression The Two-Variable Model",
+    "section": "Another Spurious Example",
+    "text": "Another Spurious Example\n统计学成绩 vs 经济计量学出勤次数\n\\[\ny = 1.9866x + 46.658, \\quad R^2 = 0.1585\n\\]\nEven with a positive slope, the relationship may be meaningless without theory."
+  },
+  {
+    "objectID": "L2slide.html#population-regression-function-prf",
+    "href": "L2slide.html#population-regression-function-prf",
+    "title": "Chapter 2  Basic Ideas of Linear Regression The Two-Variable Model",
+    "section": "2.2–2.5 Population Regression Function (PRF)",
+    "text": "2.2–2.5 Population Regression Function (PRF)\nExample: Math SAT Score vs Family Income\nConditional expectation:\n\\[\nE(Y \\mid X_i) = f(X_i)\n\\]"
+  },
+  {
+    "objectID": "L2slide.html#the-concept-of-prf",
+    "href": "L2slide.html#the-concept-of-prf",
+    "title": "Chapter 2  Basic Ideas of Linear Regression The Two-Variable Model",
+    "section": "The Concept of PRF",
+    "text": "The Concept of PRF\n\\[\nE(Y \\mid X_i) = f(X_i)\n\\]\nWhat form does \\(f(X_i)\\) take?\n\nTheory\nDiagram (scatter + conditional means)\nEmpirical evidence"
+  },
+  {
+    "objectID": "L2slide.html#two-forms-of-prf",
+    "href": "L2slide.html#two-forms-of-prf",
+    "title": "Chapter 2  Basic Ideas of Linear Regression The Two-Variable Model",
+    "section": "Two Forms of PRF",
+    "text": "Two Forms of PRF\nNonstochastic PRF:\n\\[\nE(Y \\mid X_i) = B_1 + B_2 X_i\n\\]\nStochastic PRF:\n\\[\nY_i = B_1 + B_2 X_i + u_i\n\\]"
+  },
+  {
+    "objectID": "L2slide.html#stochastic-random-error-term",
+    "href": "L2slide.html#stochastic-random-error-term",
+    "title": "Chapter 2  Basic Ideas of Linear Regression The Two-Variable Model",
+    "section": "Stochastic / Random Error Term",
+    "text": "Stochastic / Random Error Term\n\\[\nY_i = B_1 + B_2 X_i + u_i = E(Y \\mid X_i) + u_i\n\\]\n\\[\nu_i = Y_i - E(Y \\mid X_i)\n\\]\n\n\\(u_i\\) represents all factors affecting \\(Y\\) other than \\(X\\)\nTextbook reference: P26, Section 2.2"
+  },
+  {
+    "objectID": "L2slide.html#occams-razor-奥卡姆剃刀原则",
+    "href": "L2slide.html#occams-razor-奥卡姆剃刀原则",
+    "title": "Chapter 2  Basic Ideas of Linear Regression The Two-Variable Model",
+    "section": "Occam’s Razor 奥卡姆剃刀原则",
+    "text": "Occam’s Razor 奥卡姆剃刀原则\n\n“That descriptions be kept as simple as possible until proved inadequate.”\n\n— The World of Mathematics, vol. 2\nKeep our regression model as simple as possible."
+  },
+  {
+    "objectID": "L2slide.html#sample-regression-function-srf",
+    "href": "L2slide.html#sample-regression-function-srf",
+    "title": "Chapter 2  Basic Ideas of Linear Regression The Two-Variable Model",
+    "section": "2.5 Sample Regression Function (SRF)",
+    "text": "2.5 Sample Regression Function (SRF)\nSample Regression Function:\n\\[\n\\hat{Y}_i = b_1 + b_2 X_i\n\\]\n\\[\nY_i = b_1 + b_2 X_i + e_i\n\\]"
+  },
+  {
+    "objectID": "L2slide.html#prf-vs-srf",
+    "href": "L2slide.html#prf-vs-srf",
+    "title": "Chapter 2  Basic Ideas of Linear Regression The Two-Variable Model",
+    "section": "PRF vs SRF",
+    "text": "PRF vs SRF\n\n\n\n\n\n\n\n\n\nPRF\nSRF\n\n\n\n\nConditional mean\n\\(E(Y \\mid X_i) = B_1 + B_2 X_i\\)\n\\(\\hat{Y}_i = b_1 + b_2 X_i\\)\n\n\nStochastic form\n\\(Y_i = B_1 + B_2 X_i + u_i\\)\n\\(Y_i = b_1 + b_2 X_i + e_i\\)\n\n\n\nEstimators:\n\\[\n\\hat{B}_1 = b_1, \\quad \\hat{B}_2 = b_2, \\quad \\hat{u}_i = e_i\n\\]"
+  },
+  {
+    "objectID": "L2slide.html#different-samples-different-srfs",
+    "href": "L2slide.html#different-samples-different-srfs",
+    "title": "Chapter 2  Basic Ideas of Linear Regression The Two-Variable Model",
+    "section": "Different Samples → Different SRFs",
+    "text": "Different Samples → Different SRFs\nTwo random samples from the same population produce different estimated lines:\n\nSample 1: \\(\\hat{Y}_i = 432.41 + 0.0013 X_i\\)\nSample 2: \\(\\hat{Y}_i = 443.62 + 0.0010 X_i\\)\n\nThe SRF is an estimate of the unknown PRF."
+  },
+  {
+    "objectID": "L2slide.html#the-special-meaning-of-linear",
+    "href": "L2slide.html#the-special-meaning-of-linear",
+    "title": "Chapter 2  Basic Ideas of Linear Regression The Two-Variable Model",
+    "section": "2.6 The Special Meaning of “Linear”",
+    "text": "2.6 The Special Meaning of “Linear”\nTwo important distinctions:\n\nLinear-in-variable (LIV)\n变量线性：变量以一次方的形式出现\nLinear-in-parameter (LIP)\n参数线性：参数以一次方的形式出现\n\nIn classical linear regression we mainly care about linearity in parameters."
+  },
+  {
+    "objectID": "L2slide.html#ordinary-least-squares-ols",
+    "href": "L2slide.html#ordinary-least-squares-ols",
+    "title": "Chapter 2  Basic Ideas of Linear Regression The Two-Variable Model",
+    "section": "2.8 Ordinary Least Squares (OLS)",
+    "text": "2.8 Ordinary Least Squares (OLS)\nGoal: Find the “best-fit” line\n\\[\n\\hat{Y}_i = b_1 + b_2 X_i\n\\]\nPrinciple: Minimize the sum of squared residuals\n\\[\ne_i = Y_i - \\hat{Y}_i = Y_i - b_1 - b_2 X_i\n\\]\n\\[\n\\min_{b_1,b_2} \\sum e_i^2 = \\sum (Y_i - b_1 - b_2 X_i)^2\n\\]"
+  },
+  {
+    "objectID": "L2slide.html#first-order-conditions-normal-equations",
+    "href": "L2slide.html#first-order-conditions-normal-equations",
+    "title": "Chapter 2  Basic Ideas of Linear Regression The Two-Variable Model",
+    "section": "First-Order Conditions (Normal Equations)",
+    "text": "First-Order Conditions (Normal Equations)\n\\[\nRSS = \\sum (Y_i - b_1 - b_2 X_i)^2 = f(b_1, b_2)\n\\]\n\\[\n\\begin{cases}\n\\dfrac{\\partial RSS}{\\partial b_1} = -2\\sum (Y_i - b_1 - b_2 X_i) = 0 \\\\[1em]\n\\dfrac{\\partial RSS}{\\partial b_2} = -2\\sum X_i (Y_i - b_1 - b_2 X_i) = 0\n\\end{cases}\n\\]\nLeads to the normal equations:\n\\[\n\\begin{cases}\nn b_1 + b_2 \\sum X_i = \\sum Y_i \\\\\nb_1 \\sum X_i + b_2 \\sum X_i^2 = \\sum X_i Y_i\n\\end{cases}\n\\]"
+  },
+  {
+    "objectID": "L2slide.html#ols-estimators",
+    "href": "L2slide.html#ols-estimators",
+    "title": "Chapter 2  Basic Ideas of Linear Regression The Two-Variable Model",
+    "section": "OLS Estimators",
+    "text": "OLS Estimators\n\\[\nb_2 = \\dfrac{\\sum (X_i - \\bar{X})(Y_i - \\bar{Y})}{\\sum (X_i - \\bar{X})^2} = \\dfrac{\\sum x_i y_i}{\\sum x_i^2}\n\\]\n\\[\nb_1 = \\bar{Y} - b_2 \\bar{X}\n\\]\nwhere\n\\[\nx_i = X_i - \\bar{X}, \\quad y_i = Y_i - \\bar{Y}\n\\]"
+  },
+  {
+    "objectID": "L2slide.html#alternative-expression-for-b_2",
+    "href": "L2slide.html#alternative-expression-for-b_2",
+    "title": "Chapter 2  Basic Ideas of Linear Regression The Two-Variable Model",
+    "section": "Alternative Expression for \\(b_2\\)",
+    "text": "Alternative Expression for \\(b_2\\)\n\\[\nb_2 = \\dfrac{\\sum X_i Y_i - n \\bar{X}\\bar{Y}}{\\sum X_i^2 - n \\bar{X}^2}\n\\]"
+  },
+  {
+    "objectID": "L2slide.html#numerical-example-sample-1",
+    "href": "L2slide.html#numerical-example-sample-1",
+    "title": "Chapter 2  Basic Ideas of Linear Regression The Two-Variable Model",
+    "section": "Numerical Example (Sample 1)",
+    "text": "Numerical Example (Sample 1)\nAfter calculating deviations and cross-products:\n\\[\n\\hat{Y}_i = 432.4138 + 0.0013 X_i\n\\]"
+  },
+  {
+    "objectID": "L2slide.html#numerical-example-sample-2",
+    "href": "L2slide.html#numerical-example-sample-2",
+    "title": "Chapter 2  Basic Ideas of Linear Regression The Two-Variable Model",
+    "section": "Numerical Example (Sample 2)",
+    "text": "Numerical Example (Sample 2)\n\\[\n\\hat{Y}_i = 443.6207 + 0.0010 X_i\n\\]\nDifferent samples produce different estimates — this is sampling variability."
+  },
+  {
+    "objectID": "L2slide.html#features-of-the-ols-estimators-p36",
+    "href": "L2slide.html#features-of-the-ols-estimators-p36",
+    "title": "Chapter 2  Basic Ideas of Linear Regression The Two-Variable Model",
+    "section": "Features of the OLS Estimators (P36)",
+    "text": "Features of the OLS Estimators (P36)\n\n\\(\\bar{Y} = b_1 + b_2 \\bar{X}\\)\n(the regression line passes through the sample mean point)\n\\(\\sum e_i = 0 \\quad \\Leftrightarrow \\quad \\sum Y_i = \\sum \\hat{Y}_i\\)\n\\(\\sum e_i X_i = 0\\)\n\\(\\sum e_i \\hat{Y}_i = 0\\)"
+  },
+  {
+    "objectID": "L2slide.html#interpretation-of-the-slope",
+    "href": "L2slide.html#interpretation-of-the-slope",
+    "title": "Chapter 2  Basic Ideas of Linear Regression The Two-Variable Model",
+    "section": "Interpretation of the Slope",
+    "text": "Interpretation of the Slope\n\n\\(b_2\\): Other things remaining the same, if \\(X\\) increases by one unit, the average (mean) of \\(Y\\) increases by \\(b_2\\) units.\n\\(b_1\\): Usually has no meaningful economic interpretation (especially when \\(X=0\\) is outside the relevant range)."
+  },
+  {
+    "objectID": "L2slide.html#advantages-disadvantages-of-ols",
+    "href": "L2slide.html#advantages-disadvantages-of-ols",
+    "title": "Chapter 2  Basic Ideas of Linear Regression The Two-Variable Model",
+    "section": "Advantages & Disadvantages of OLS",
+    "text": "Advantages & Disadvantages of OLS\nAdvantages - Simple and clear - Under classical assumptions → BLUE (Best Linear Unbiased Estimator) — see Chapter 3\nDisadvantages - Sensitive to outliers\nImprovements - Weighted Least Squares (WLS) — Chapter 9 - Generalized Least Squares (GLS) — Chapter 10"
+  },
+  {
+    "objectID": "L2slide.html#illustrative-example",
+    "href": "L2slide.html#illustrative-example",
+    "title": "Chapter 2  Basic Ideas of Linear Regression The Two-Variable Model",
+    "section": "Illustrative Example",
+    "text": "Illustrative Example\n关于英语成绩的调查（15级陈芷晴小组）\n\\[\n\\widehat{\\text{CET4}}_i = 98.036 + 3.433 \\times \\text{EnglishGaokao}_i\n\\]\n\\[\n\\widehat{\\text{CET6}}_i = -47.013 + 4.200 \\times \\text{EnglishGaokao}_i\n\\]"
+  },
+  {
+    "objectID": "L2slide.html#some-illustrative-examples",
+    "href": "L2slide.html#some-illustrative-examples",
+    "title": "Chapter 2  Basic Ideas of Linear Regression The Two-Variable Model",
+    "section": "2.10 Some Illustrative Examples",
+    "text": "2.10 Some Illustrative Examples\n\nExamples 2.1 – 2.5 in the textbook\nFocus on interpretation of the estimated equation"
+  },
+  {
+    "objectID": "L2slide.html#chapter-2-summary",
+    "href": "L2slide.html#chapter-2-summary",
+    "title": "Chapter 2  Basic Ideas of Linear Regression The Two-Variable Model",
+    "section": "Chapter 2 Summary",
+    "text": "Chapter 2 Summary\n\nThe Meaning of Regression\nPopulation Regression Function (PRF) & Sample Regression Function (SRF)\nThe Special Meaning of “Linear”\nThe Method of Ordinary Least Squares (OLS)\nFeatures of the OLS estimators\nInterpretation of the Slope coefficient"
+  },
+  {
+    "objectID": "L2slide.html#the-special-meaning-of-linear-ordinary-least-squares-ols",
+    "href": "L2slide.html#the-special-meaning-of-linear-ordinary-least-squares-ols",
+    "title": "Chapter 2  Basic Ideas of Linear Regression The Two-Variable Model",
+    "section": "2.6 ~ 2.10 The Special Meaning of “Linear” & Ordinary Least Squares (OLS)",
+    "text": "2.6 ~ 2.10 The Special Meaning of “Linear” & Ordinary Least Squares (OLS)"
   }
 ]

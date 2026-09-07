@@ -44,13 +44,15 @@ Gujarati, Damodar N. Essentials of econometrics, the 4th edition. McGraw-Hill/Ir
 <img src="img/download.png" style="width: 24px; height: 24px;margin-right: 10px"/>[下载参考书](https://pan.baidu.com/s/1P61dg9FZiTDZxzAVXZrJiw?pwd=6789)
     
 
-# EViews 12
+# EViews 12/13/14
 
 <img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px"/>Eviews官网<https://eviews.com/home.html>
 
-<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px"/>申请Eviews12 学生版序列号 <https://register1.eviews.com/Lite12/>
+<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px"/>申请Eviews14 Student Version Lite序列号 <https://register1.eviews.com/Lite/>
 
-<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px"/>[如何申请免费的Eviews12学生版?](https://www.bilibili.com/video/BV1Sd4y1371P/)
+<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px"/>申请Eviews12 Student Version Lite序列号 <https://register1.eviews.com/Lite12/>
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px"/>[如何申请免费的Eviews12 Student Version Lite?](https://www.bilibili.com/video/BV1Sd4y1371P/)
 
 
 # 教学视频

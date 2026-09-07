@@ -1,0 +1,462 @@
+---
+title: Chapter 2 <br> Basic Ideas of Linear Regression <br>The Two-Variable Model
+author: "Li Zongzhang"
+date: today
+format: 
+  revealjs:
+    incremental: false
+    theme: [sky]
+    slide-number: c/t
+    show-slide-number: all
+    code-fold: true
+    code-copy: true
+    code-summary: "查看R代码"
+    chalkboard: 
+      buttons: true
+      board-canvas-background: "#f0f0f0"
+    preview-links: auto
+    toc-title: "大纲"
+    css: style.css
+    footer: |
+      [Econometrics](https://lizongzhang.github.io/metrics26i) | © 2026, [Li Zongzhang](https://space.bilibili.com/590872906/)
+    include-before-body: 
+      - header.html
+      - fonts.html
+    menu: 
+      side: left
+      width: wide
+    toc: true
+    toc-depth: 2
+    plugins: [highlight, zoom, notes]
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,comment="")
+```
+
+
+---
+
+- **2.1** The Meaning of Regression
+- **2.2 ~ 2.5**
+  - The Population Regression Function (PRF)
+  - The Sample Regression Function (SRF)
+- **2.6 ~ 2.10**
+  - The Special Meaning of “Linear”
+  - The Method of Ordinary Least Squares (OLS)
+  - Features of the OLS estimators
+
+---
+
+## 2.1 Historical Origin of the Term Regression
+
+### “回归”术语的历史起源
+
+**Francis Galton** (1822–1911)  
+
+- <https://galton.org/>
+- *Family Likeness in Stature*  
+  *Proceedings of Royal Society, London*, vol.40, 1886, pp.42–72
+- **Law of universal regression**（普遍回归定律）
+
+---
+
+### Galton's Height Data
+
+- **Family**: The family that the child belongs to (1 to 205)
+- **Father**: The father's height, in inches
+- **Mother**: The mother's height, in inches
+- **Gender**: Male (M) or Female (F)
+- **Height**: The height of the child, in inches
+- **Kids**: The number of kids in the family
+
+Data set has **898 cases**.  
+(Original family 136A relabeled as 205)
+
+Source: [https://randomservices.org/random/data/Galton.html](https://randomservices.org/random/data/Galton.html)
+
+---
+
+### History of Regression
+
+- **Regression Towards Mediocrity in Hereditary Stature**  
+  Francis Galton (1886)
+
+- Key concept:  
+  **Reversion to mediocrity** → **Regression to mediocrity** → **Regression to the mean**
+
+- Tall parents tend to have children closer to the average height  
+- Short parents also tend to have children closer to the average height
+
+---
+
+## 2.1 The Meaning of Regression
+
+Regression analysis is concerned with the study of the dependence of one variable (the **dependent variable**) on one or more other variables (the **explanatory variables**).
+
+
+---
+
+### Example: Son’s Height & Father’s Height
+
+Hypothetical distribution of sons' heights corresponding to given heights of fathers.
+
+- Conditional mean of son’s height increases with father’s height
+- But there is still substantial variation around the mean
+
+---
+
+### Other Examples
+
+**Age & Height**  
+Hypothetical distribution of heights corresponding to selected ages.
+
+**Crop Yield** depends on:
+- Temperature
+- Rainfall
+- Sunshine
+- Fertilizer
+
+---
+
+### Terminology in Regression Analysis
+
+| **Y**                        | **X**                          |
+|-----------------------------|--------------------------------|
+| dependent variable (应变量)   | independent variable (自变量)  |
+| explained variable (被解释变量) | explanatory variable (解释变量) |
+| regressand (回归子)          | regressor (回归元)             |
+| predicted variable (被预测变量) | predictor variable (预测变量)  |
+
+---
+
+### Regression & Causation
+
+- Regression **≠** Causation
+- Establishing causation requires:
+  - Theory
+  - Common sense
+  - Careful research design
+
+---
+
+### Spurious Regression 伪（虚假）回归
+
+Examples of nonsense correlations:
+
+- Size of vocabulary (X) & Writing speed (Y)
+- Size of shoes (X) & Math score (Y)
+- Number of elephants (X) & Crime rate (Y)
+
+Famous site: [tylervigen.com/spurious-correlations](http://www.tylervigen.com/spurious-correlations)
+
+---
+
+### Spurious Regression Examples
+
+**US spending on science, space, and technology**  
+correlates with  
+**Suicides by hanging, strangulation and suffocation**  
+Correlation: **99.79%** ($r = 0.9979$)
+
+**US crude oil imports from Norway**  
+correlates with  
+**Drivers killed in collision with railway train**
+
+---
+
+### Another Spurious Example
+
+统计学成绩 vs 经济计量学出勤次数
+
+$$
+y = 1.9866x + 46.658, \quad R^2 = 0.1585
+$$
+
+Even with a positive slope, the relationship may be meaningless without theory.
+
+---
+
+## 2.2–2.5 Population Regression Function (PRF)
+
+### Example: Math SAT Score vs Family Income
+
+Conditional expectation:
+
+$$
+E(Y \mid X_i) = f(X_i)
+$$
+
+---
+
+### The Concept of PRF
+
+$$
+E(Y \mid X_i) = f(X_i)
+$$
+
+**What form does $f(X_i)$ take?**
+
+- Theory
+- Diagram (scatter + conditional means)
+- Empirical evidence
+
+---
+
+### Two Forms of PRF
+
+**Nonstochastic PRF**:
+
+$$
+E(Y \mid X_i) = B_1 + B_2 X_i
+$$
+
+**Stochastic PRF**:
+
+$$
+Y_i = B_1 + B_2 X_i + u_i
+$$
+
+---
+
+### Stochastic / Random Error Term
+
+$$
+Y_i = B_1 + B_2 X_i + u_i = E(Y \mid X_i) + u_i
+$$
+
+$$
+u_i = Y_i - E(Y \mid X_i)
+$$
+
+- $u_i$ represents all factors affecting $Y$ other than $X$
+- Textbook reference: P26, Section 2.2
+
+---
+
+### Occam’s Razor 奥卡姆剃刀原则
+
+> “That descriptions be kept as simple as possible until proved inadequate.”
+
+— *The World of Mathematics*, vol. 2
+
+**Keep our regression model as simple as possible.**
+
+---
+
+### 2.5 Sample Regression Function (SRF)
+
+**Sample Regression Function**:
+
+$$
+\hat{Y}_i = b_1 + b_2 X_i
+$$
+
+$$
+Y_i = b_1 + b_2 X_i + e_i
+$$
+
+---
+
+### PRF vs SRF
+
+|                  | **PRF**                          | **SRF**                          |
+|------------------|----------------------------------|----------------------------------|
+| Conditional mean | $E(Y \mid X_i) = B_1 + B_2 X_i$ | $\hat{Y}_i = b_1 + b_2 X_i$     |
+| Stochastic form  | $Y_i = B_1 + B_2 X_i + u_i$     | $Y_i = b_1 + b_2 X_i + e_i$     |
+
+Estimators:
+
+$$
+\hat{B}_1 = b_1, \quad \hat{B}_2 = b_2, \quad \hat{u}_i = e_i
+$$
+
+---
+
+### Different Samples → Different SRFs
+
+Two random samples from the same population produce different estimated lines:
+
+- Sample 1: $\hat{Y}_i = 432.41 + 0.0013 X_i$
+- Sample 2: $\hat{Y}_i = 443.62 + 0.0010 X_i$
+
+The SRF is an **estimate** of the unknown PRF.
+
+## 2.6 ~ 2.10 The Special Meaning of “Linear” & Ordinary Least Squares (OLS)
+
+---
+
+### 2.6 The Special Meaning of “Linear”
+
+Two important distinctions:
+
+- **Linear-in-variable (LIV)**  
+  变量线性：变量以一次方的形式出现
+
+- **Linear-in-parameter (LIP)**  
+  参数线性：参数以一次方的形式出现
+
+In classical linear regression we mainly care about **linearity in parameters**.
+
+---
+
+### 2.8 Ordinary Least Squares (OLS)
+
+**Goal**: Find the “best-fit” line
+
+$$
+\hat{Y}_i = b_1 + b_2 X_i
+$$
+
+**Principle**: Minimize the sum of squared residuals
+
+$$
+e_i = Y_i - \hat{Y}_i = Y_i - b_1 - b_2 X_i
+$$
+
+$$
+\min_{b_1,b_2} \sum e_i^2 = \sum (Y_i - b_1 - b_2 X_i)^2
+$$
+
+---
+
+### First-Order Conditions (Normal Equations)
+
+$$
+RSS = \sum (Y_i - b_1 - b_2 X_i)^2 = f(b_1, b_2)
+$$
+
+$$
+\begin{cases}
+\dfrac{\partial RSS}{\partial b_1} = -2\sum (Y_i - b_1 - b_2 X_i) = 0 \\[1em]
+\dfrac{\partial RSS}{\partial b_2} = -2\sum X_i (Y_i - b_1 - b_2 X_i) = 0
+\end{cases}
+$$
+
+Leads to the **normal equations**:
+
+$$
+\begin{cases}
+n b_1 + b_2 \sum X_i = \sum Y_i \\
+b_1 \sum X_i + b_2 \sum X_i^2 = \sum X_i Y_i
+\end{cases}
+$$
+
+---
+
+### OLS Estimators
+
+$$
+b_2 = \dfrac{\sum (X_i - \bar{X})(Y_i - \bar{Y})}{\sum (X_i - \bar{X})^2} = \dfrac{\sum x_i y_i}{\sum x_i^2}
+$$
+
+$$
+b_1 = \bar{Y} - b_2 \bar{X}
+$$
+
+where
+
+$$
+x_i = X_i - \bar{X}, \quad y_i = Y_i - \bar{Y}
+$$
+
+---
+
+### Alternative Expression for $b_2$
+
+$$
+b_2 = \dfrac{\sum X_i Y_i - n \bar{X}\bar{Y}}{\sum X_i^2 - n \bar{X}^2}
+$$
+
+---
+
+### Numerical Example (Sample 1)
+
+After calculating deviations and cross-products:
+
+$$
+\hat{Y}_i = 432.4138 + 0.0013 X_i
+$$
+
+---
+
+### Numerical Example (Sample 2)
+
+$$
+\hat{Y}_i = 443.6207 + 0.0010 X_i
+$$
+
+Different samples produce different estimates — this is sampling variability.
+
+---
+
+### Features of the OLS Estimators (P36)
+
+1. $\bar{Y} = b_1 + b_2 \bar{X}$  
+   (the regression line passes through the sample mean point)
+
+2. $\sum e_i = 0 \quad \Leftrightarrow \quad \sum Y_i = \sum \hat{Y}_i$
+
+3. $\sum e_i X_i = 0$
+
+4. $\sum e_i \hat{Y}_i = 0$
+
+---
+
+### Interpretation of the Slope
+
+- **$b_2$**: Other things remaining the same, if $X$ increases by one unit, the average (mean) of $Y$ increases by $b_2$ units.
+
+- **$b_1$**: Usually has **no meaningful economic interpretation** (especially when $X=0$ is outside the relevant range).
+
+---
+
+### Advantages & Disadvantages of OLS
+
+**Advantages**
+- Simple and clear
+- Under classical assumptions → **BLUE** (Best Linear Unbiased Estimator) — see Chapter 3
+
+**Disadvantages**
+- Sensitive to outliers
+
+**Improvements**
+- Weighted Least Squares (WLS) — Chapter 9
+- Generalized Least Squares (GLS) — Chapter 10
+
+---
+
+### Illustrative Example
+
+关于英语成绩的调查
+
+$$
+\widehat{\text{CET4}}_i = 98.036 + 3.433 \times \text{EnglishGaokao}_i
+$$
+
+$$
+\widehat{\text{CET6}}_i = -47.013 + 4.200 \times \text{EnglishGaokao}_i
+$$
+
+---
+
+### 2.10 Some Illustrative Examples
+
+- Examples 2.1 – 2.5 in the textbook
+- Focus on **interpretation of the estimated equation**
+
+---
+
+### Chapter 2 Summary
+
+- The Meaning of Regression
+- Population Regression Function (PRF) & Sample Regression Function (SRF)
+- The Special Meaning of “Linear”
+- The Method of Ordinary Least Squares (OLS)
+- Features of the OLS estimators
+- Interpretation of the Slope coefficient
+
