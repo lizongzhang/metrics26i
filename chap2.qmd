@@ -40,6 +40,16 @@ title: "Chap2"
 
 </details>
 
+# 拓展资源
+
+<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px"/>[Pearson, K., & Lee, A. (1903). On the Laws of Inheritance in Man: I. Inheritance of Physical Characters. Biometrika, 2(4), 357–462.](https://www.jstor.org/stable/2331507){target="_blank"}
+
+<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px"/>一元回归OLS估计 [https://www.geogebra.org/m/EPqRjE7K](https://www.geogebra.org/m/EPqRjE7K){target="_blank"}
+
+<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px"/>OLS方法动画演示 [https://setosa.io/ev/ordinary-least-squares-regression/](https://setosa.io/ev/ordinary-least-squares-regression/){target="_blank"}
+
+
+
 
 
 
