@@ -4,7 +4,7 @@ title: "Chap2"
 
 # Slides
 
-<img src="img/teacher.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[讲义](https://lizongzhang.github.io/metrics26i/L2slide.html){target="_blank"} 
+<img src="img/teacher.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[L2讲义](https://lizongzhang.github.io/metrics26i/L2slide.html){target="_blank"} 
 
 
 # Eviews

@@ -45,6 +45,7 @@ knitr::opts_chunk$set(echo = TRUE,comment="")
 - **2.2 ~ 2.5**
   - The Population Regression Function (PRF)
   - The Sample Regression Function (SRF)
+  - Random Error Term
 - **2.6 ~ 2.10**
   - The Special Meaning of “Linear”
   - The Method of Ordinary Least Squares (OLS)
@@ -52,7 +53,7 @@ knitr::opts_chunk$set(echo = TRUE,comment="")
 
 ---
 
-## 2.1 Historical Origin of the Term Regression
+### 2.1 Historical Origin of the Term Regression
 
 ### “回归”术语的历史起源
 
@@ -74,6 +75,8 @@ knitr::opts_chunk$set(echo = TRUE,comment="")
 - **Height**: The height of the child, in inches
 - **Kids**: The number of kids in the family
 
+---
+
 Data set has **898 cases**.  
 (Original family 136A relabeled as 205)
 
@@ -94,6 +97,10 @@ Source: [https://randomservices.org/random/data/Galton.html](https://randomservi
 
 ---
 
+![](img/regress.png){width=45% fig-align="center"}
+
+---
+
 ## 2.1 The Meaning of Regression
 
 Regression analysis is concerned with the study of the dependence of one variable (the **dependent variable**) on one or more other variables (the **explanatory variables**).
@@ -107,6 +114,10 @@ Hypothetical distribution of sons' heights corresponding to given heights of fat
 
 - Conditional mean of son’s height increases with father’s height
 - But there is still substantial variation around the mean
+
+---
+
+![](img/galton.png){width=45% fig-align="center"}
 
 ---
 
@@ -181,7 +192,7 @@ Even with a positive slope, the relationship may be meaningless without theory.
 
 ---
 
-## 2.2–2.5 Population Regression Function (PRF)
+## 2.2–2.5 Population Regression Function & Sample Regression Function
 
 ### Example: Math SAT Score vs Family Income
 
@@ -192,6 +203,16 @@ E(Y \mid X_i) = f(X_i)
 $$
 
 ---
+
+![](img/conditional.png){width=45% fig-align="center"}
+
+---
+
+![](img/prf.png){width=45% fig-align="center"}
+
+---
+
+
 
 ### The Concept of PRF
 
@@ -240,9 +261,10 @@ $$
 
 ### Occam’s Razor 奥卡姆剃刀原则
 
-> “That descriptions be kept as simple as possible until proved inadequate.”
+“That descriptions be kept as simple as possible until proved inadequate.”
 
-— *The World of Mathematics*, vol. 2
+— The World of Mathematics, vol. 2, J. R. Newman
+(ed.), Simon & Schuster, New York, 1956, p. 1247
 
 **Keep our regression model as simple as possible.**
 
@@ -277,6 +299,11 @@ $$
 
 ---
 
+![](img/srf.png){width=45% fig-align="center"}
+
+
+---
+
 ### Different Samples → Different SRFs
 
 Two random samples from the same population produce different estimated lines:
@@ -307,6 +334,11 @@ In classical linear regression we mainly care about **linearity in parameters**.
 ### 2.8 Ordinary Least Squares (OLS)
 
 **Goal**: Find the “best-fit” line
+
+![](img/ols.png){width=45% fig-align="center"}
+
+
+---
 
 $$
 \hat{Y}_i = b_1 + b_2 X_i
@@ -394,7 +426,24 @@ Different samples produce different estimates — this is sampling variability.
 
 ---
 
-### Features of the OLS Estimators (P36)
+![](img/ols2.png){width=45% fig-align="center"}
+
+---
+
+![](img/scat_sample1.png){width=45% fig-align="center"}
+
+---
+
+![](img/ols_sample2.png){width=45% fig-align="center"}
+
+---
+
+![](img/scat_sample2.png){width=45% fig-align="center"}
+
+
+---
+
+### Features of the OLS Estimators 
 
 1. $\bar{Y} = b_1 + b_2 \bar{X}$  
    (the regression line passes through the sample mean point)
@@ -455,6 +504,7 @@ $$
 
 - The Meaning of Regression
 - Population Regression Function (PRF) & Sample Regression Function (SRF)
+- Random Error Term
 - The Special Meaning of “Linear”
 - The Method of Ordinary Least Squares (OLS)
 - Features of the OLS estimators

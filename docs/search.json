@@ -228,7 +228,7 @@
     "href": "chap2.html",
     "title": "Chap2",
     "section": "",
-    "text": "Slides\n讲义\n\n\nEviews\nEviews12 如何录入数据\nEviews 12 如何导入Excel文件\nEviews 12 主界面\nEviews12 绘制散点图\nEviews12 矩阵散点图和气泡图\nEviews12 回归方程的估计\nEviews12 如何在散点图上添加回归线和回归方程？\nEviews12 如何修改坐标轴字体、添加网格线、设置边框？\n\n\n习题答案\n\n\n点击展开\n\n\n如果想在新窗口打开 PDF，请点这里： 在新标签页中查看 PDF\n\n\n&lt;!-- 备用内容（若浏览器不支持 iframe） --&gt;\n&lt;p&gt;\n你的浏览器无法嵌入 PDF，请 &lt;a href=\"img/EE4_Ch02_Solutions_Manual.pdf\" target=\"_blank\" rel=\"noopener\"&gt;点此下载/查看 PDF&lt;/a&gt;.\n&lt;/p&gt;"
+    "text": "Slides\nL2讲义\n\n\nEviews\nEviews12 如何录入数据\nEviews 12 如何导入Excel文件\nEviews 12 主界面\nEviews12 绘制散点图\nEviews12 矩阵散点图和气泡图\nEviews12 回归方程的估计\nEviews12 如何在散点图上添加回归线和回归方程？\nEviews12 如何修改坐标轴字体、添加网格线、设置边框？\n\n\n习题答案\n\n\n点击展开\n\n\n如果想在新窗口打开 PDF，请点这里： 在新标签页中查看 PDF\n\n\n&lt;!-- 备用内容（若浏览器不支持 iframe） --&gt;\n&lt;p&gt;\n你的浏览器无法嵌入 PDF，请 &lt;a href=\"img/EE4_Ch02_Solutions_Manual.pdf\" target=\"_blank\" rel=\"noopener\"&gt;点此下载/查看 PDF&lt;/a&gt;.\n&lt;/p&gt;"
   },
   {
     "objectID": "chap7.html",
@@ -565,5 +565,12 @@
     "title": "Chapter 2  Basic Ideas of Linear Regression The Two-Variable Model",
     "section": "2.6 ~ 2.10 The Special Meaning of “Linear” & Ordinary Least Squares (OLS)",
     "text": "2.6 ~ 2.10 The Special Meaning of “Linear” & Ordinary Least Squares (OLS)"
+  },
+  {
+    "objectID": "L2slide.html#population-regression-function-sample-regression-function",
+    "href": "L2slide.html#population-regression-function-sample-regression-function",
+    "title": "Chapter 2  Basic Ideas of Linear Regression The Two-Variable Model",
+    "section": "2.2–2.5 Population Regression Function & Sample Regression Function",
+    "text": "2.2–2.5 Population Regression Function & Sample Regression Function\nExample: Math SAT Score vs Family Income\nConditional expectation:\n\\[\nE(Y \\mid X_i) = f(X_i)\n\\]"
   }
 ]

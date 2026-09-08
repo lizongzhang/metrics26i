@@ -192,7 +192,9 @@ Li Zongzhang
 <h2 id="toc-title">大纲</h2>
 <ul>
 
-<li><a href="#/historical-origin-of-the-term-regression" id="/toc-historical-origin-of-the-term-regression">2.1 Historical Origin of the Term Regression</a></li>
+
+
+
 
 
 <li><a href="#/the-meaning-of-regression" id="/toc-the-meaning-of-regression">2.1 The Meaning of Regression</a></li>
@@ -203,7 +205,11 @@ Li Zongzhang
 
 
 
-<li><a href="#/population-regression-function-prf" id="/toc-population-regression-function-prf">2.2–2.5 Population Regression Function (PRF)</a></li>
+
+<li><a href="#/population-regression-function-sample-regression-function" id="/toc-population-regression-function-sample-regression-function">2.2–2.5 Population Regression Function &amp; Sample Regression Function</a></li>
+
+
+
 
 
 
@@ -212,6 +218,11 @@ Li Zongzhang
 
 
 <li><a href="#/the-special-meaning-of-linear-ordinary-least-squares-ols" id="/toc-the-special-meaning-of-linear-ordinary-least-squares-ols">2.6 ~ 2.10 The Special Meaning of “Linear” &amp; Ordinary Least Squares (OLS)</a></li>
+
+
+
+
+
 
 
 
@@ -236,6 +247,7 @@ Li Zongzhang
 <ul>
 <li>The Population Regression Function (PRF)</li>
 <li>The Sample Regression Function (SRF)</li>
+<li>Random Error Term</li>
 </ul></li>
 <li><strong>2.6 ~ 2.10</strong>
 <ul>
@@ -245,8 +257,9 @@ Li Zongzhang
 </ul></li>
 </ul>
 </section>
-<section id="historical-origin-of-the-term-regression" class="slide level2">
-<h2>2.1 Historical Origin of the Term Regression</h2>
+<section class="slide level2">
+
+<h3 id="historical-origin-of-the-term-regression">2.1 Historical Origin of the Term Regression</h3>
 <h3 id="回归术语的历史起源">“回归”术语的历史起源</h3>
 <p><strong>Francis Galton</strong> (1822–1911)</p>
 <ul>
@@ -267,6 +280,9 @@ Li Zongzhang
 <li><strong>Height</strong>: The height of the child, in inches</li>
 <li><strong>Kids</strong>: The number of kids in the family</li>
 </ul>
+</section>
+<section class="slide level2">
+
 <p>Data set has <strong>898 cases</strong>.<br>
 (Original family 136A relabeled as 205)</p>
 <p>Source: <a href="https://randomservices.org/random/data/Galton.html">https://randomservices.org/random/data/Galton.html</a></p>
@@ -284,6 +300,10 @@ Francis Galton (1886)</p></li>
 <li><p>Short parents also tend to have children closer to the average height</p></li>
 </ul>
 </section>
+<section class="slide level2">
+
+
+<img data-src="img/regress.png" class="quarto-figure quarto-figure-center r-stretch" style="width:45.0%"></section>
 <section id="the-meaning-of-regression" class="slide level2">
 <h2>2.1 The Meaning of Regression</h2>
 <p>Regression analysis is concerned with the study of the dependence of one variable (the <strong>dependent variable</strong>) on one or more other variables (the <strong>explanatory variables</strong>).</p>
@@ -297,6 +317,10 @@ Francis Galton (1886)</p></li>
 <li>But there is still substantial variation around the mean</li>
 </ul>
 </section>
+<section class="slide level2">
+
+
+<img data-src="img/galton.png" class="quarto-figure quarto-figure-center r-stretch" style="width:45.0%"></section>
 <section class="slide level2">
 
 <h3 id="other-examples">Other Examples</h3>
@@ -378,14 +402,22 @@ y = 1.9866x + 46.658, \quad R^2 = 0.1585
 \]</span></p>
 <p>Even with a positive slope, the relationship may be meaningless without theory.</p>
 </section>
-<section id="population-regression-function-prf" class="slide level2">
-<h2>2.2–2.5 Population Regression Function (PRF)</h2>
+<section id="population-regression-function-sample-regression-function" class="slide level2">
+<h2>2.2–2.5 Population Regression Function &amp; Sample Regression Function</h2>
 <h3 id="example-math-sat-score-vs-family-income">Example: Math SAT Score vs Family Income</h3>
 <p>Conditional expectation:</p>
 <p><span class="math display">\[
 E(Y \mid X_i) = f(X_i)
 \]</span></p>
 </section>
+<section class="slide level2">
+
+
+<img data-src="img/conditional.png" class="quarto-figure quarto-figure-center r-stretch" style="width:45.0%"></section>
+<section class="slide level2">
+
+
+<img data-src="img/prf.png" class="quarto-figure quarto-figure-center r-stretch" style="width:45.0%"></section>
 <section class="slide level2">
 
 <h3 id="the-concept-of-prf">The Concept of PRF</h3>
@@ -428,10 +460,8 @@ u_i = Y_i - E(Y \mid X_i)
 <section class="slide level2">
 
 <h3 id="occams-razor-奥卡姆剃刀原则">Occam’s Razor 奥卡姆剃刀原则</h3>
-<blockquote>
 <p>“That descriptions be kept as simple as possible until proved inadequate.”</p>
-</blockquote>
-<p>— <em>The World of Mathematics</em>, vol.&nbsp;2</p>
+<p>— The World of Mathematics, vol.&nbsp;2, J. R. Newman (ed.), Simon &amp; Schuster, New York, 1956, p.&nbsp;1247</p>
 <p><strong>Keep our regression model as simple as possible.</strong></p>
 </section>
 <section class="slide level2">
@@ -481,6 +511,10 @@ Y_i = b_1 + b_2 X_i + e_i
 </section>
 <section class="slide level2">
 
+
+<img data-src="img/srf.png" class="quarto-figure quarto-figure-center r-stretch" style="width:45.0%"></section>
+<section class="slide level2">
+
 <h3 id="different-samples-different-srfs">Different Samples → Different SRFs</h3>
 <p>Two random samples from the same population produce different estimated lines:</p>
 <ul>
@@ -508,6 +542,10 @@ Y_i = b_1 + b_2 X_i + e_i
 
 <h3 id="ordinary-least-squares-ols">2.8 Ordinary Least Squares (OLS)</h3>
 <p><strong>Goal</strong>: Find the “best-fit” line</p>
+
+<img data-src="img/ols.png" class="quarto-figure quarto-figure-center r-stretch" style="width:45.0%"></section>
+<section class="slide level2">
+
 <p><span class="math display">\[
 \hat{Y}_i = b_1 + b_2 X_i
 \]</span></p>
@@ -578,7 +616,23 @@ b_2 = \dfrac{\sum X_i Y_i - n \bar{X}\bar{Y}}{\sum X_i^2 - n \bar{X}^2}
 </section>
 <section class="slide level2">
 
-<h3 id="features-of-the-ols-estimators-p36">Features of the OLS Estimators (P36)</h3>
+
+<img data-src="img/ols2.png" class="quarto-figure quarto-figure-center r-stretch" style="width:45.0%"></section>
+<section class="slide level2">
+
+
+<img data-src="img/scat_sample1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:45.0%"></section>
+<section class="slide level2">
+
+
+<img data-src="img/ols_sample2.png" class="quarto-figure quarto-figure-center r-stretch" style="width:45.0%"></section>
+<section class="slide level2">
+
+
+<img data-src="img/scat_sample2.png" class="quarto-figure quarto-figure-center r-stretch" style="width:45.0%"></section>
+<section class="slide level2">
+
+<h3 id="features-of-the-ols-estimators">Features of the OLS Estimators</h3>
 <ol type="1">
 <li><p><span class="math inline">\(\bar{Y} = b_1 + b_2 \bar{X}\)</span><br>
 (the regression line passes through the sample mean point)</p></li>
@@ -627,6 +681,7 @@ b_2 = \dfrac{\sum X_i Y_i - n \bar{X}\bar{Y}}{\sum X_i^2 - n \bar{X}^2}
 <ul>
 <li>The Meaning of Regression</li>
 <li>Population Regression Function (PRF) &amp; Sample Regression Function (SRF)</li>
+<li>Random Error Term</li>
 <li>The Special Meaning of “Linear”</li>
 <li>The Method of Ordinary Least Squares (OLS)</li>
 <li>Features of the OLS estimators</li>
