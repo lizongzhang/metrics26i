@@ -572,5 +572,12 @@
     "title": "Chapter 2  Basic Ideas of Linear Regression The Two-Variable Model",
     "section": "2.2–2.5 Population Regression Function & Sample Regression Function",
     "text": "2.2–2.5 Population Regression Function & Sample Regression Function\nExample: Math SAT Score vs Family Income\nConditional expectation:\n\\[\nE(Y \\mid X_i) = f(X_i)\n\\]"
+  },
+  {
+    "objectID": "L3slide.html",
+    "href": "L3slide.html",
+    "title": "Chapter 3 The Two-Variable Model: Hypothesis Testing",
+    "section": "",
+    "text": "注意：本讲义供学习交流使用，请勿用于商业用途"
   }
 ]
